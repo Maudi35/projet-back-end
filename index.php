@@ -2,19 +2,13 @@
 <header>
     <?php include 'config/template/nav.php'; ?>
 </header>
-<h2 class="text-center mt-5 mb-5">Page Accueil</h2>
+<!--<h2 class="text-center mt-5 mb-5">Page Accueil</h2>-->
 <hr>
 
 
 <!DOCTYPE html>
 <html lang="fr">
-<head>
-	<meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="Description" content=""/>
-    <title>COSMETICS</title>
-    <link type="text/css" rel="stylesheet" href=".css">
-</head>
+
 <body> 
     <main>
         <!--<h1>COSMETICS</h1>-->

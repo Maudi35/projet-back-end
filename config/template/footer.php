@@ -2,6 +2,7 @@
 
 <footer>
 
+<div class="footer-product">
     <h3>NOS PRODUITS</h3>
 <ul>    
     <li>Corps</li>
@@ -10,6 +11,7 @@
     <li>Maquillage</li>
     <li>Accessoires</li>
 </ul>
+</div>
 
 <h3>SERVICE CLIENT</h3>
 <ul>  
