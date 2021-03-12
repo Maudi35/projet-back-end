@@ -60,4 +60,5 @@
 </body> 
 </html> 
 
+<form></form>
 <?php include 'config/template/footer.php'; ?>
