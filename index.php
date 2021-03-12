@@ -55,7 +55,7 @@
             <p>Kit relaxant parfumé</p>
             <p>€45</p>
         </article>
-    </section> fffff
+    </section> 
     </main>
 </body> 
 </html> 

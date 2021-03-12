@@ -21,7 +21,6 @@ section {
   margin: auto;
 }
 
-
 /*NAV*/
 .nav {
   width: 100%;
@@ -38,7 +37,6 @@ section {
 .home-link {
   margin-right: 5%;
 }
-
 
 /* HOME */
 
@@ -70,7 +68,6 @@ section {
   height: 284.67px;
 }
 
-
 /* PROFIL */
 
 .profil h6 {
@@ -80,14 +77,14 @@ section {
 .profil {
   display: flex;
   flex-direction: row;
-  justify-content: center;  
+  justify-content: center;
   width: 100%;
 }
 
 .deconnexion p {
   width: 100%;
   margin: -10px;
-  text-align: right; 
+  text-align: right;
 }
 
 /* INSCRIPTION  */
@@ -116,9 +113,9 @@ section {
   font-size: 13px;
 }
 
-input[type=text]{
-  border-radius: 5px; 
-  box-sizing: border-box; 
+input[type="text"] {
+  border-radius: 5px;
+  box-sizing: border-box;
   border: none;
   width: 50%;
 }
@@ -134,7 +131,7 @@ select {
   width: 50%;
 }
 
-input[type=envoyer] {
+input[type="envoyer"] {
   background-color: black;
   color: white;
   padding: 12px 20px;
@@ -145,7 +142,7 @@ input[type=envoyer] {
   width: 50%;
   margin-bottom: 20px;
 }
- 
+
 /* PANIER */
 
 .basket {
@@ -170,7 +167,7 @@ ul {
   width: 100%;
 }
 
-input[type=submit] {
+input[type="submit"] {
   background-color: black;
   color: white;
   padding: 12px 20px;
@@ -182,13 +179,13 @@ input[type=submit] {
 }
 
 .submit {
-  margin-top:50px;
+  margin-top: 50px;
 }
 
 .basket-content img {
   height: 350px;
   width: 250px;
-  object-fit: contain
+  object-fit: contain;
 }
 
 .img-panier img {
@@ -240,8 +237,16 @@ footer li {
 
 /* RESPONSIVE  */
 
-@media screen and (max-width: 720px) { 
+@media (min-width: 481px) {
+}
 
+@media (max-width: 1199px) {
+  .nav-desktop {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 720px) {
   .profil h6 {
     margin: 20px;
   }
@@ -253,3 +258,5 @@ footer li {
   }
 }
 
+@media (min-width: 1200px) {
+}
