@@ -38,9 +38,7 @@
        <ul class="third-list">
            <li>TOTAL</li>
            <li><strong>75,00€</strong></li>
-        <div class="submit">
-            <input type="submit" value="PASSER COMMANDE">
-        </div>
+     
     </section>
      
 </body>
