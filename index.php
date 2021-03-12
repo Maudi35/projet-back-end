@@ -55,10 +55,9 @@
             <p>Kit relaxant parfumé</p>
             <p>€45</p>
         </article>
-    </section>
+    </section> fffff
     </main>
 </body> 
 </html> 
 
-<form></form>
 <?php include 'config/template/footer.php'; ?>
