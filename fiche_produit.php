@@ -24,6 +24,8 @@
     <div class="product-precision">
     <!-- création d'une div pour ajouter du texte pour décrire les produits si besoin  -->
     </div>
+    <div>
+    </div>
 </body>
 </html>
 
