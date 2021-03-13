@@ -25,7 +25,7 @@ section {
 
 .navbar-right {
   display: flex;
-  flex-direction: row; 
+  flex-direction: row;
   text-align: right;
 }
 
@@ -34,7 +34,7 @@ section {
 }
 
 .navbar-left a {
-  font-family: 'Montserrat', sans-serif;
+  font-family: "Montserrat", sans-serif;
   font-weight: bold;
   font-size: 30px;
 }
@@ -81,7 +81,7 @@ section {
 }
 
 .img-product {
-  height: 300px;;
+  height: 300px;
   object-fit: contain;
 }
 
@@ -173,7 +173,7 @@ input[type="submit"] {
   background-color: lightgrey;
   border-radius: 10px;
   text-align: center;
-  width:100%;
+  width: 100%;
 }
 
 /*FOOTER*/
@@ -193,8 +193,8 @@ footer h3 {
   font-size: 20px;
 }
 
-footer ul{
-  display:flex;
+footer ul {
+  display: flex;
   flex-direction: column;
 }
 
@@ -222,10 +222,41 @@ footer li {
   margin-right: 2%;
 }
 
+.div-newsletter {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+
+.div-newsletter-input {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+}
+
+.label-newsletter {
+  align-self: baseline;
+}
+
+.text-newsletter {
+  border: 0.01em solid #fff;
+  background-color: #161616;
+  color: #fff;
+}
+.newsletter-button {
+  margin-top: 5%;
+  border: 1.7px solid#000;
+  padding: ;
+  color: #000;
+  background: #fff;
+  font-weight: 700;
+  font-size: 15px;
+}
+
 /* RESPONSIVE  */
 
 @media screen and (min-width: 481px) {
-
 }
 
 /* @media screen and (max-width: 1199px) {
@@ -240,7 +271,7 @@ footer li {
     flex-flow: wrap;
     justify-content: space-evenly;
   }
-  
+
   .profil h6 {
     margin: 20px;
   }
@@ -250,15 +281,63 @@ footer li {
     text-align: center;
     width: 100%;
   }
-
 }
 
 @media screen and (min-width: 1200px) {
+  .home-product {
+    display: flex;
+    justify-content: space-around;
+    flex-flow: wrap;
+    width: 50%;
+  }
+
+  .home-product footer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+  }
+
   footer {
     display: flex;
     flex-direction: row;
-    justify-content: space-evenly;
-    align-items: center;
-    text-align: center;
-    }
+    justify-content: space-around;
   }
+
+  .footer-categories {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    text-align: left;
+  }
+
+  footer li {
+    font-size: 13px;
+  }
+
+  .div-newsletter-input {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: baseline;
+    width: 50%;
+  }
+
+  .social-networks {
+    width: 30%;
+    margin-inline: auto;
+  }
+
+  .social-networks-svg {
+    height: 100px;
+    width: 100px;
+  }
+
+  .copyright {
+    margin-inline-start: auto;
+  }
+
+  .copyright p {
+    font-size: 10px;
+  }
+}

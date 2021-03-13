@@ -19,6 +19,7 @@
     </section>
 
     <section class="home-product">
+        
         <article class="home-soap">
             <img class="img-product" src="asset/image-backend/savon-algues.jpg" alt="">
             <p>Savon aux algues</p>
