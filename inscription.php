@@ -8,24 +8,19 @@
 
 <!-- HTML  -->
 
-<html>
-<body>
-    <section class="inscription-content">
-    <h2>COSMETICS</h2>
-    <form>
-        <div>
-            <label for="name">Nom</label>
-            <br>
-            <input type="text" id="name" name="Nom">
-        </div>  
+    <section class="container">
+        <h1 class="text-center mb-3">COSMETICS</h1>
+        <div class="mb-3">
+            <label for="nom" class="form-label">Nom</label>
+            <input type="text" class="form-control" id="name"  name="nom">
+        </div>
         <div>
             <label for="surname">Prénom</label>
-            <br>
-            <input type="text" id="surname" name="Prénom">
+            <input type="text" class="form-control" id="surname" name="prenom">
         </div>
-        <div id="selection">
-        <label for="surname">Civilité</label>
-            <select name="civilite" id="civilite">
+        <div class="selection">
+            <label for="formcontrolselect">Civilité</label>
+            <select class="form-control" id="formcontrolselect">
                 <option value="madame" selected>Mme</option>
                 <option value="monsieur">M.</option>
                 <option value="autre">Autre</option>
@@ -33,28 +28,23 @@
         </div>
         <div>
             <label for="address">Adresse postale</label>
-            <br>
-            <input type="text" id="address" name="Adresse postale">
+            <input type="text" class="form-control" id="address" name="Adresse postale">
         </div>
         <div>
             <label for="phone">Téléphone</label>
-            <br>
-            <input type="text" id="phone" name="Téléphone">
+            <input type="text" class="form-control" id="phone" name="telephone">
         </div>
         <div>
             <label for="pseudo">Pseudo</label>
-            <br>
-            <input type="text" id="pseudo" name="Pseudo">
+            <input type="text" class="form-control" id="pseudo" name="pseudo">
         </div>
         <div>
             <label for="password">Mot de passe</label>
-            <br>
-            <input type="text" id="password" name="Mot de passe">
+            <input type="text" class="form-control" id="password" name="password">
         </div>
         <div>
-            <label for="confirm">Confirmation de mot de passe</label>
-            <br>
-            <input type="text" id="confirm" name="Confirmation de mot de passe">
+            <label for="confirm-password">Confirmation mot de passe</label>
+            <input type="text" class="form-control" id="confirm-password" name="confirm-password">
         </div>
         <div class="check">
             <input type="checkbox" checked="checked">
@@ -63,11 +53,7 @@
         <div>
             <p>Pour en savoir plus, notamment sur vos droits relatifs à vos données personnelles, consultez notre politique de confidentialité</p>
         </div>
-        <input type="envoyer" value="Créer mon compte">
-    </form>
-    </section>
-</body>
-</html>
-
+        <input type="submit" value="Créer mon compte" class="btn btn-lg bnt-block btn-dark" name="envoyer" id="exampleInputEmail1" aria-describedby="emailHelp">
+</section>
 
 <?php include 'config/template/footer.php'; ?>

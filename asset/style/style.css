@@ -22,7 +22,24 @@ section {
 }
 
 /*NAV*/
-.nav {
+
+.navbar-right {
+  display: flex;
+  flex-direction: row; 
+  text-align: right;
+}
+
+.navbar-right a {
+  margin: 20px;
+}
+
+.navbar-left a {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: bold;
+  font-size: 30px;
+}
+
+/* .nav {
   width: 100%;
   display: flex;
   justify-content: center;
@@ -36,7 +53,7 @@ section {
 
 .home-link {
   margin-right: 5%;
-}
+} */
 
 /* HOME */
 
@@ -64,8 +81,8 @@ section {
 }
 
 .img-product {
-  width: 270px;
-  height: 284.67px;
+  height: 300px;;
+  object-fit: contain;
 }
 
 /* PROFIL */
@@ -79,6 +96,7 @@ section {
   flex-direction: row;
   justify-content: center;
   width: 100%;
+  height: 300px;
 }
 
 .deconnexion p {
@@ -89,58 +107,15 @@ section {
 
 /* INSCRIPTION  */
 
-.inscription-content {
-  text-align: center;
-  border-radius: 5px;
-  background-color: #f2f2f2;
-  max-width: 500px;
+.container {
+  background-color: rgb(228, 228, 228);
+  border-radius: 8px;
   margin-bottom: 20px;
 }
 
-.inscription-content h2 {
-  font-weight: bold;
-}
-
-.check {
-  align-content: center;
-  font-size: 13px;
-  display: flex;
-  flex-direction: row;
-  margin-top: 15px;
-}
-
-.inscription-content p {
-  font-size: 13px;
-}
-
-input[type="text"] {
-  border-radius: 5px;
-  box-sizing: border-box;
-  border: none;
-  width: 50%;
-}
-
-label {
-  text-align: left;
-  width: 50%;
-  margin-top: 10px;
-}
-
-select {
-  margin: 5px;
-  width: 50%;
-}
-
-input[type="envoyer"] {
-  background-color: black;
-  color: white;
-  padding: 12px 20px;
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
-  text-align: center;
-  width: 50%;
-  margin-bottom: 20px;
+input {
+  border: 0.5px black solid;
+  border-radius: 10px;
 }
 
 /* PANIER */
@@ -194,6 +169,13 @@ input[type="submit"] {
   object-fit: cover;
 }
 
+.subtotal {
+  background-color: lightgrey;
+  border-radius: 10px;
+  text-align: center;
+  width:100%;
+}
+
 /*FOOTER*/
 
 footer {
@@ -244,13 +226,12 @@ footer li {
 
 @media screen and (min-width: 481px) {
 
-  
 }
 
-@media screen and (max-width: 1199px) {
+/* @media screen and (max-width: 1199px) {
   .nav-desktop {
     display: none; 
-}
+} */
 
 @media screen and (max-width: 720px) {
   /*Page d'accueil*/
@@ -272,13 +253,12 @@ footer li {
 
 }
 
-@media (min-width: 1200px) {
-  footer{
+@media screen and (min-width: 1200px) {
+  footer {
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
     align-items: center;
     text-align: center;
+    }
   }
-  
-}

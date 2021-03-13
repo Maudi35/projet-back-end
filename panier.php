@@ -7,8 +7,7 @@
 
 
 <!-- HTML -->
-<html>
-<body>
+
     <!-- a remplir quand on fera le css  -->
     <div class="img-panier">
         <img src="roll2.jpg"> 
@@ -25,24 +24,26 @@
         </div>
     <hr>
     </section>
-    <section class="subtotal">
-        <div class="box">
-       <ul class="first-list">
-           <li>Sous-total</li>
-           <li>75,00€</li>
-       </ul>
-       <ul class="second-list">
-            <li>Livraison - Standard</li>
-           <li>Offerte</li>
-       </ul>
-       <ul class="third-list">
-           <li>TOTAL</li>
-           <li><strong>75,00€</strong></li>
-     
-    </section>
-     
-</body>
-</html>
+
+<!-- TEST BOOTSTRAP -->
+
+<section class="subtotal">
+    <div class="row">
+        <div class="col-4">Sous-total</div>
+        <div class="col-4">75,00€</div>
+    </div>
+
+    <div class="row">
+        <div class="col-4">Livraison - Standard</div>
+        <div class="col-4">Offerte</div>
+    </div>
+
+    <div class="row">
+        <div class="col-4">TOTAL</div>
+        <div class="col-4">75,00€</div>
+    </div>
+</section>
+
 
 <?php include 'config/template/footer.php'; ?>
 
