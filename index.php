@@ -3,56 +3,57 @@
     <?php include 'config/template/nav.php'; ?>
 </header>
 <!--<h2 class="text-center mt-5 mb-5">Page Accueil</h2>-->
-<hr>
-
-
-<!DOCTYPE html>
-<html lang="fr">
-
 <body> 
     <main>
-        <!--<h1>COSMETICS</h1>-->
-        <!--<p>My first paragraph.</p>-->
-        
-        <!--je mets rien dedans car en général les images je les met en background-->
-    <section class="hero-image">
-    </section>
-
+    <div class="fullscreen-image">
+    </div>
     <section class="home-product">
-        
-        <article class="home-soap">
+        <h2>TOUS NOS PRODUITS</h2>
+        <hr>
+        <article class="product">
             <img class="img-product" src="asset/image-backend/savon-algues.jpg" alt="">
-            <p>Savon aux algues</p>
-            <p>€25</p> 
+            <div class="product-descrption">
+                <p>Savon aux algues</p>
+                <p>€25</p> 
+            </div>
         </article>
-        <article class="home-roll">
+        <article class="product">
             <img class="img-product" src="asset/image-backend/roll.jpg" alt="">
-            <p>Roll anti-stress</p>
-            <p>€17</p>
+            <div class="product-descrption">
+                <p>Roll anti-stress</p>
+                <p>€17</p>
+            </div>
         </article>
-        <article class="home-elixir">
+        <article class="product">
             <img class="img-product" src="asset/image-backend/elixir.jpg" alt="">
-            <p>Elixir Rosa</p>
-            <p>€35</p>
+            <div class="product-descrption">
+                <p>Elixir Rosa</p>
+                <p>€35</p>
+            </div>
         </article>
-        <article class="home-nail-assortment">
+        <article class="product">
             <img class="img-product" src="asset/image-backend/kit-ongle.jpg" alt="">
-            <p>Kit sublime ongle</p>
-            <p>€17</p>
+            <div class="product-descrption">
+                <p>Kit sublime ongle</p>
+                <p>€17</p>
+            </div>
         </article>
-        <article class="home-toothpaste">
+        <article class="product">
              <img class="img-product" src="asset/image-backend/brosse-a-dents.jpg" alt="">
-            <p>Dentifrice blancheur</p>
-            <p>€12</p>
+             <div class="product-descrption">
+                <p>Dentifrice blancheur</p>
+                <p>€12</p>
+             </div>
         </article>
-        <article class="home-well-being-kit">
+        <article class="product">
             <img class="img-product" src="asset/image-backend/kit-bien-etre.jpg" alt="">
-            <p>Kit relaxant parfumé</p>
-            <p>€45</p>
+            <div class="product-descrption">
+                <p>Kit relaxant parfumé</p>
+                <p>€45</p>
+            </div>
         </article>
     </section> 
     </main>
 </body> 
-</html> 
 
 <?php include 'config/template/footer.php'; ?>
