@@ -2,29 +2,37 @@
 <header>
     <?php include 'config/template/nav.php'; ?>
 </header>
-<h2 class="text-center mt-5 mb-5">Page fiche produit</h2>
+<!--<h2 class="text-center mt-5 mb-5">Page fiche produit</h2>-->
 <hr>
 
 <!-- HTML  -->
 <html>
 <body>
-    <section class="product-img">
-    <!-- ici on a les trois images à la suite du produit  -->
-        <img src="produit1" alt="hydra beauty"> 
-        <img src="produit1" alt="hydra beauty">
-        <img src="produit1" alt="hydra beauty"> 
-    </section>
-    <section class="product-description">
-        <h2>HYDRA BEAUTY CAMELLIA WATER CLEAN</h2> 
-        <br> 
-        <h3>FLUIDE IDRATANT ILLUMINATEUR</h3>
-        <br> 
-        <input type="button" value="Ajouter au panier">     
-    </section>
-    <div class="product-precision">
-    <!-- création d'une div pour ajouter du texte pour décrire les produits si besoin  -->
-    </div>
-    <div>
+    <div class="all-product-page">
+        <section class="product-img">
+        <!-- ici on a les trois images à la suite du produit  -->
+            <div class="algae-soap">
+                <img src="asset/image-backend/savon-algues.jpg" alt="hydra beauty"> 
+            </div>
+            <div class="algae-soap">
+                <img src="asset/image-backend/savon-algues-2.jpeg" alt="hydra beauty">
+            </div>
+            <div class="algae-soap">
+                <img src="asset/image-backend/savon-algues-3.jpeg" alt="hydra beauty">
+        </div>
+        </section>
+        <section class="product-description">
+            <h2>SAVON ALGUES CAMELLIA WATER CLEAN</h2> 
+            <br> 
+            <h3>SAVON HYDRATANT MATIFIANT</h3>
+            <br> 
+            <div class="add-to-cart-container">
+            <input class="add-to-cart" type="button" value="Ajouter au panier">
+            </div>    
+        </section>
+        <div class="product-precision">
+        <!-- création d'une div pour ajouter du texte pour décrire les produits si besoin  -->
+        </div>
     </div>
 </body>
 </html>

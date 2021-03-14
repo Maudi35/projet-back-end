@@ -2,7 +2,7 @@
 <header>
     <?php include 'config/template/nav.php'; ?>
 </header>
-<h2 class="text-center mt-5 mb-5">Page login</h2>
+<!--<h2 class="text-center mt-5 mb-5">Page login</h2>-->
 <hr>
 
 <div class="container">
@@ -21,7 +21,7 @@
           <label for="password" class="form-label">Mot de passe</label>
           <input type="password" class="form-control" id="password" placeholder="Votre mot de passe" name="password">
         </div>
-        <input type="submit" value="Envoyer les données" class="btn btn-lg btn-dark" name="envoyer" id="exampleInputEmail1" aria-describedby="emailHelp">
+        <input type="submit" value="Envoyer les données" class="login-registration" name="envoyer" id="exampleInputEmail1" aria-describedby="emailHelp">
       </form>
 </div>
 

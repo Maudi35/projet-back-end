@@ -17,7 +17,7 @@
         <div class="basket-content">
             <img src="asset/image-backend/savon-algues.jpg">
             <p>SAVON - ALGUES</p>
-            <!--<input type="submit" value="Supprimer" name="supprimer" class="delete-input">-->
+            <input type="submit" value="Supprimer" name="supprimer" class="delete-input">
         </div>
         <div class="basket-quantity">
             <p>Quantité 1</p> 
@@ -40,12 +40,12 @@
     </div>
 
     <div class="row">
-        <div class="col-4">TOTAL</div>
-        <div class="col-4">75,00€</div>
+        <div class="col-4 total-basket">TOTAL</div>
+        <div class="col-4 total-basket">75,00€</div>
     </div>    
 </section>
-<div class="basket-button">
-<input type="submit" value="PASSER COMMANDE" name="envoyer" class="btn btn-lg btn-block btn-dark">
+<div class="basket-input-container">
+<input type="submit" value="Passer commande" name="envoyer" class="basket-input">
 </div>
 
 

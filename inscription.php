@@ -2,13 +2,13 @@
 <header>
     <?php include 'config/template/nav.php'; ?>
 </header>
-<h2 class="text-center mt-5 mb-5">Page inscription</h2>
+<!--<h2 class="text-center mt-5 mb-5">Page inscription</h2>-->
 <hr>
 
 <!-- HTML  -->
 
     <section class="container">
-        <h1 class="text-center mb-3">COSMETICS</h1>
+        <h2 class="text-center mb-3">INSCRIPTION</h2>
         <div class="mb-3">
             <label for="nom" class="form-label">Nom</label>
             <input type="text" class="form-control" id="name"  name="nom">
@@ -52,7 +52,7 @@
         <div>
             <p>Pour en savoir plus, notamment sur vos droits relatifs à vos données personnelles, consultez notre politique de confidentialité</p>
         </div>
-        <input type="submit" value="Créer mon compte" class="btn btn-lg bnt-block btn-dark" name="envoyer" id="exampleInputEmail1" aria-describedby="emailHelp">
+        <input type="submit" value="Créer mon compte" class="login-registration" name="envoyer" id="exampleInputEmail1" aria-describedby="emailHelp">
 </section>
 
 <?php include 'config/template/footer.php'; ?>

@@ -85,6 +85,27 @@ section {
   display: flex;
 }
 
+/*************FICHE PRODUIT****************/
+
+.algae-soap img,
+.algae-soap-2 img,
+.algae-soap-3 img {
+  height: 100%;
+  width: 90%;
+  object-fit: contain;
+}
+
+.add-to-cart {
+  background-color: black;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
 /**************************************PROFIL ***********************************/
 
 .profil h6 {
@@ -141,7 +162,7 @@ ul {
   width: 100%;
 }
 
-input[type="submit"] {
+.login-registration {
   background-color: black;
   color: white;
   padding: 12px 20px;
@@ -168,6 +189,7 @@ input[type="submit"] {
 }
 .basket-quantity {
   width: 80%;
+  margin-top: 2%;
   justify-content: space-between;
 }
 
@@ -180,7 +202,6 @@ input[type="submit"] {
 .subtotal {
   background-color: lightgrey;
   /*border-radius: 10px;*/
-  text-align: center;
   width: 80%;
 }
 
@@ -189,9 +210,42 @@ input[type="submit"] {
   justify-content: space-between;
 }
 
-.btn-dark {
+.col-4 {
   width: 50%;
+}
+
+.total-basket {
+  font-weight: 700;
+}
+
+.basket-input-container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.basket-input {
   margin-top: 5%;
+  font-weight: 600;
+  background-color: black;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 0px;
+  cursor: pointer;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.delete-input {
+  background: 0 0;
+  border: 0;
+  color: #818181;
+  cursor: pointer;
+  padding: 0;
+  line-height: inherit;
+  margin-left: -22.5%;
+  margin-top: 2%;
 }
 
 /*************************************FOOTER*********************************/
@@ -234,8 +288,8 @@ footer {
 
 /********************************* RESPONSIVE  ****************************/
 
-@media screen and (max-width: 720px) {
-  /*Page d'accueil*/
+@media screen and (max-width: 1199px) /**720**/ {
+  /*****Page d'accueil*******/
   .home-product {
     display: flex;
     flex-flow: wrap;
@@ -250,6 +304,17 @@ footer {
     /* width: 33%; */
   }
 
+  /*****PANIER*******/
+
+  .basket {
+    width: 50%;
+  }
+  .subtotal {
+    /*border-radius: 10px;*/
+    width: 50%;
+  }
+
+  /*****PROFIL*******/
   .profil h6 {
     margin: 20px;
   }
@@ -284,8 +349,12 @@ footer {
   }
 
   /*****Page produit*****/
-  .product-description {
+  .all-product-page {
     display: flex;
+  }
+  .product-description {
+    display: column;
+    margin-top: 0;
   }
 
   /********PANIER**************/
@@ -293,9 +362,7 @@ footer {
     width: 50%;
   }
   .subtotal {
-    background-color: lightgrey;
     /*border-radius: 10px;*/
-    text-align: center;
     width: 50%;
   }
 
