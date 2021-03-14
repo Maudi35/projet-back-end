@@ -8,6 +8,7 @@ body {
   padding: 0;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
     Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  /*width: fit-content;*/
 }
 
 a {
@@ -21,7 +22,7 @@ section {
   margin: auto;
 }
 
-/*NAV*/
+/*************************************NAV**********************************/
 
 .navbar-right {
   display: flex;
@@ -39,12 +40,12 @@ section {
   font-size: 30px;
 }
 
-/* HOME */
+/*********************************** HOME ***********************************/
 
 /* Hero full image */
 
 .fullscreen-image {
-  background : url("https://www.pexels.com/photo/3737599/download/?search_query=beauty%20products&tracking_id=8o2zbghxxlk");
+  background: url("https://www.pexels.com/photo/3737599/download/?search_query=beauty%20products&tracking_id=8o2zbghxxlk");
   background-size: cover;
   height: 85vh;
   text-align: center;
@@ -68,11 +69,10 @@ section {
   margin: 20px;
 }
 
-
 .home-product p {
   display: flex;
   flex-wrap: wrap;
-    justify-content: space-around;
+  justify-content: space-around;
 }
 
 .home-product img {
@@ -85,7 +85,7 @@ section {
   display: flex;
 }
 
-/* PROFIL */
+/**************************************PROFIL ***********************************/
 
 .profil h6 {
   margin: 20px;
@@ -105,7 +105,7 @@ section {
   text-align: right;
 }
 
-/* INSCRIPTION  */
+/*********************************** INSCRIPTION  ****************************/
 
 .container {
   background-color: rgb(228, 228, 228);
@@ -118,7 +118,7 @@ input {
   border-radius: 10px;
 }
 
-/* PANIER */
+/**************************************** PANIER ******************************/
 
 .basket {
   text-align: center;
@@ -156,28 +156,49 @@ input[type="submit"] {
   margin-top: 50px;
 }
 
-.basket-content img {
-  height: 350px;
-  width: 250px;
-  object-fit: contain;
-}
-
 .img-panier img {
   width: 100%;
   height: 300px;
   object-fit: cover;
 }
 
-.subtotal {
-  background-color: lightgrey;
-  border-radius: 10px;
-  text-align: center;
-  width: 100%;
+.basket-content,
+.basket-quantity {
+  display: flex;
+}
+.basket-quantity {
+  width: 80%;
+  justify-content: space-between;
 }
 
-/*FOOTER*/
+.basket-content img {
+  height: 50px;
+  width: 36px;
+  object-fit: contain;
+}
 
-.mainfooter, li, ul {
+.subtotal {
+  background-color: lightgrey;
+  /*border-radius: 10px;*/
+  text-align: center;
+  width: 80%;
+}
+
+.row {
+  display: flex;
+  justify-content: space-between;
+}
+
+.btn-dark {
+  width: 50%;
+  margin-top: 5%;
+}
+
+/*************************************FOOTER*********************************/
+
+.mainfooter,
+li,
+ul {
   display: flex;
   flex-direction: column;
   text-align: center;
@@ -206,12 +227,12 @@ footer {
   justify-content: center;
 }
 
-.social-media h5{
+.social-media h5 {
   text-align: center;
   margin: 5px;
 }
 
-/* RESPONSIVE  */
+/********************************* RESPONSIVE  ****************************/
 
 @media screen and (max-width: 720px) {
   /*Page d'accueil*/
@@ -241,6 +262,7 @@ footer {
 }
 
 @media screen and (min-width: 1200px) {
+  /****Page d'accueil*****/
   .home-product {
     display: flex;
     justify-content: space-around;
@@ -249,7 +271,7 @@ footer {
   }
 
   .fullscreen-image {
-    background : url("https://www.pexels.com/photo/3737594/download/?search_query=beauty%20products&tracking_id=8o2zbghxxlk");
+    background: url("https://www.pexels.com/photo/3737594/download/?search_query=beauty%20products&tracking_id=8o2zbghxxlk");
     background-size: cover;
     height: 90vh;
     text-align: center;
@@ -261,16 +283,29 @@ footer {
     width: 33%;
   }
 
-  .product-descrption {
+  /*****Page produit*****/
+  .product-description {
     display: flex;
   }
 
+  /********PANIER**************/
+  .basket {
+    width: 50%;
+  }
+  .subtotal {
+    background-color: lightgrey;
+    /*border-radius: 10px;*/
+    text-align: center;
+    width: 50%;
+  }
+
+  /******FOOTER*******/
   .mainfooter {
     width: 100%;
-    display:flex; 
-    flex-direction: row; 
+    display: flex;
+    flex-direction: row;
     justify-content: space-between;
-  } 
+  }
 
   .colonne {
     width: 100%;
@@ -288,7 +323,8 @@ footer {
     flex-direction: row;
   }
 
-  .colonne h5, li {
+  .colonne h5,
+  li {
     text-align: left;
   }
 
