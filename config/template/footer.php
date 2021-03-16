@@ -39,7 +39,7 @@
             <h5>NEWSLETTER</h5>
             <input type="text" name="text" placeholder="Entrez votre email">
             <input type="submit" name="envoyer">
-        </div>
+          </div>
         </div>
         <div class="colonne">
           <h5>SUIVEZ-NOUS</h5>

@@ -5,49 +5,42 @@
 <!--<h2 class="text-center mt-5 mb-5">Page panier</h2>-->
 <hr>
 
-
 <!-- HTML -->
-
-    <!-- a remplir quand on fera le css  -->
-    <div class="img-panier">
-        <img src="asset/image-backend/image-panier-cosmetics.jpeg"> 
-    </div>
-    <section class="basket">
-        <h2>PANIER</h2>
-        <div class="basket-content">
-            <img src="asset/image-backend/savon-algues.jpg">
-            <p>SAVON - ALGUES</p>
-            <input type="submit" value="Supprimer" name="supprimer" class="delete-input">
-        </div>
-        <div class="basket-quantity">
-            <p>Quantité 1</p> 
-            <p>25€</p>
-        </div>
-    <hr>
-    </section>
-
-<!-- TEST BOOTSTRAP -->
-
-<section class="subtotal">
-    <div class="row">
-        <div class="col-4">Sous-total</div>
-        <div class="col-4">75,00€</div>
-    </div>
-
-    <div class="row">
-        <div class="col-4">Livraison - Standard</div>
-        <div class="col-4">Offerte</div>
-    </div>
-
-    <div class="row">
-        <div class="col-4 total-basket">TOTAL</div>
-        <div class="col-4 total-basket">75,00€</div>
-    </div>    
-</section>
-<div class="basket-input-container">
-<input type="submit" value="Passer commande" name="envoyer" class="basket-input">
+<div class="img-panier">
+    <img src="asset/image-backend/image-panier-cosmetics.jpeg"> 
 </div>
-
+<section class="basket">
+    <h2>PANIER</h2>
+    <hr>
+    <img src="asset/image-backend/savon-algues.jpg">
+    <hr>
+    <div class="basket-quantity">
+        <h5>SAVON - ALGUES</h5>
+        <a href=""><p>Supprimer</p></a>
+    </div>
+    <div class="basket-quantity">
+        <p>Quantité 1</p> 
+        <p>25€</p>
+    </div>
+</section>
+<hr>
+<section class="cart">
+    <div class="box">
+        <div class="total">
+            <p>Sous-total</p> 
+            <p>75€</p>
+        </div>
+        <div class="total">
+            <p>Livraison standard</p> 
+            <p>Offerte</p>
+        </div>
+        <div class="total">
+            <p class="bold">TOTAL</p> 
+            <p class="bold">75€</p>
+        </div>
+    <input type="submit" value="Valider ma commande" name="envoyer" class="basket-input">
+    </div>
+</section>
 
 <?php include 'config/template/footer.php'; ?>
 
