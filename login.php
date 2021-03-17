@@ -20,9 +20,11 @@
       <label for="password" class="form-label">Mot de passe</label>
       <input type="password" class="form-control" id="password" placeholder="Votre mot de passe" name="password">
     </div>
+    <div class=button-container>
     <input type="submit" value="Envoyer les données" class="login-registration" name="envoyer" id="exampleInputEmail1" aria-describedby="emailHelp">
-  </div>
+    </div>
+</div>
   </form>
 
-<?php include 'config/template/footer.php'; ?>
 
+<?php include 'config/template/footer.php'; ?>

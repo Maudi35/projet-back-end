@@ -52,7 +52,8 @@
         <div>
             <p>Pour en savoir plus, notamment sur vos droits relatifs à vos données personnelles, consultez notre politique de confidentialité</p>
         </div>
+        <div class="button-container">
         <input type="submit" value="Créer mon compte" class="login-registration" name="envoyer" id="exampleInputEmail1" aria-describedby="emailHelp">
+        </div>
 </section>
-
 <?php include 'config/template/footer.php'; ?>

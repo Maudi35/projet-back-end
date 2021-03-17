@@ -95,14 +95,15 @@ ul {
   flex-direction: column;
 }
 
-.algae-soap img, .algae-soap-responsive img {
+.algae-soap img,
+.algae-soap-responsive img {
   height: 100%;
   width: 100%;
   object-fit: contain;
   justify-content: center;
 }
 
-.add-to-cart input{
+.add-to-cart input {
   background-color: black;
   color: white;
   padding: 12px 20px;
@@ -120,7 +121,7 @@ ul {
 }
 
 .description {
-  display: flex; 
+  display: flex;
   justify-content: space-between;
 }
 
@@ -137,12 +138,13 @@ ul {
   text-align: right;
 }
 
-/* INSCRIPTION */
+/* LOGIN ET INSCRIPTION */
 
 .container {
   background-color: rgb(228, 228, 228);
   border-radius: 8px;
   margin-bottom: 20px;
+  width: 90%;
 }
 
 input {
@@ -159,6 +161,12 @@ input {
   cursor: pointer;
   text-align: center;
   margin-bottom: 20px;
+}
+
+.button-container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
 }
 
 /* PANIER  */
@@ -199,7 +207,7 @@ input {
 }
 
 .total {
-  display: flex; 
+  display: flex;
   justify-content: space-between;
 }
 
@@ -221,7 +229,7 @@ input {
   justify-content: center;
   width: 100%;
   align-items: center;
-  display: flex; 
+  display: flex;
 }
 
 /* FOOTER  */
@@ -281,12 +289,18 @@ footer {
     text-align: center;
   }
 
+  /* LOGIN ET INSCRIPTION */
+
+  .container {
+    width: 65%;
+  }
+
   .cart {
     width: 50%;
   }
 
-   /* FOOTER */
-   .mainfooter {
+  /* FOOTER */
+  .mainfooter {
     width: 100%;
     display: flex;
     flex-direction: row;
@@ -320,7 +334,7 @@ footer {
 }
 
 @media screen and (min-width: 1024px) {
- /* HOME */
+  /* HOME */
   .fullscreen-image {
     background: url("https://www.pexels.com/photo/3737594/download/?search_query=beauty%20products&tracking_id=8o2zbghxxlk");
     background-size: cover;
@@ -330,7 +344,7 @@ footer {
     margin-bottom: 20px;
   }
 
-  .fullscreen-content { 
+  .fullscreen-content {
     max-width: 350px;
     margin: 100px;
   }
@@ -338,20 +352,24 @@ footer {
   .home-product {
     width: 75%;
   }
+  /*LOGIN ET INSCRIPTION*/
+  .container {
+    width: 50%;
+  }
 
   /* PROFIL */
   .profil h6 {
     margin: 20px;
   }
-  
+
   .profil {
     display: flex;
     flex-direction: row;
     justify-content: center;
     width: 100%;
   }
-  
-/* Page produit */
+
+  /* Page produit */
 
   .algae-soap img {
     object-fit: contain;
@@ -379,7 +397,7 @@ footer {
     width: 50%;
   }
 
- /* FOOTER */
+  /* FOOTER */
   .mainfooter {
     width: 100%;
     display: flex;

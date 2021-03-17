@@ -18,35 +18,35 @@
         <article class="product">
             <img class="img-product" src="asset/image-backend/roll.jpg" alt="">
             <div class="product-description">
-                <a href="fiche_produit.php"><p>Roll anti-stress</p></a>
+                <a href="fiche_produit-2.php"><p>Roll anti-stress</p></a>
                 <p class="price">17 €</p>
             </div>
         </article>
         <article class="product">
             <img class="img-product" src="asset/image-backend/elixir.jpg" alt="">
             <div class="product-description">
-                <a href="fiche_produit.php"><p>Elixir Rosa</p></a>
+                <a href="fiche_produit-3.php"><p>Elixir Rosa</p></a>
                 <p class="price">35 €</p>
             </div>
         </article>
         <article class="product">
             <img class="img-product" src="asset/image-backend/kit-ongle.jpg" alt="">
             <div class="product-description">
-            <a href="fiche_produit.php"><p>Kit sublime ongles</p></a>
+            <a href="fiche_produit-4.php"><p>Kit sublime ongles</p></a>
             <p class="price">17 €</p>
             </div>
         </article>
         <article class="product">
              <img class="img-product" src="asset/image-backend/brosse-a-dents.jpg" alt="">
              <div class="product-description">
-                <a href="fiche_produit.php"><p>Dentifrice blancheur</p></a>
+                <a href="fiche_produit-5.php"><p>Dentifrice blancheur</p></a>
                 <p class="price">12 €</p>
              </div>
         </article>
         <article class="product">
             <img class="img-product" src="asset/image-backend/kit-bien-etre.jpg" alt="">
             <div class="product-description">
-                <a href="fiche_produit.php"><p>Kit relaxant parfumé</p></a>
+                <a href="fiche_produit-6.php"><p>Kit relaxant parfumé</p></a>
                 <p class="price">45 €</p>
             </div>
         </article>
