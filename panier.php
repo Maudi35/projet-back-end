@@ -10,12 +10,12 @@
     <img src="asset/image-backend/image-panier-cosmetics.jpeg"> 
 </div>
 <section class="basket">
-    <h1>PANIER</h1>
+    <h2>PANIER</h2>
     <hr>
     <img src="asset/image-backend/savon-algues.jpg">
     <hr>
     <div class="basket-quantity">
-        <h5>SAVON - ALGUES</h5>
+        <h3>SAVON - ALGUES</h3>
         <a href=""><p>Supprimer</p></a>
     </div>
     <div class="basket-quantity">

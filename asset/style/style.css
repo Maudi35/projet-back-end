@@ -9,11 +9,12 @@
 body {
   margin: 0;
   padding: 0;
-  font-family: 'Neue Haas Grotesk', sans-serif;
+  font-family: "Neue Haas Grotesk", sans-serif;
 }
 
 a {
   color: #000;
+  cursor: pointer;
 }
 
 section {
@@ -39,7 +40,7 @@ hr {
 }
 
 h1 {
-  color: black; 
+  color: black;
   font-weight: bold;
   text-align: center;
   margin: 10px;
@@ -114,8 +115,8 @@ h1 {
   flex-direction: column;
 }
 
-.algae-soap img,
-.algae-soap-responsive img {
+.img-product-container img,
+.img-product-container-responsive img {
   height: 100%;
   width: 100%;
   object-fit: contain;
@@ -160,7 +161,7 @@ h1 {
 }
 
 .profil {
-  padding: 30px 0 200px; 
+  padding: 30px 0 200px;
 }
 
 .profil-content {
@@ -169,7 +170,6 @@ h1 {
   text-align: center;
   margin: 10px;
 }
-
 
 /* LOGIN ET INSCRIPTION */
 
@@ -203,7 +203,7 @@ input {
 }
 
 .check {
-  display: flex; 
+  display: flex;
   flex-direction: row;
   width: 100%;
   margin-top: 10px;
@@ -320,7 +320,6 @@ footer {
 
 /* RESPONSIVE  */
 @media screen and (min-width: 800px) {
-  
   .profil h6 {
     margin: 20px;
   }
@@ -413,12 +412,12 @@ footer {
 
   /* Page produit */
 
-  .algae-soap {
-    display: flex; 
+  .img-product-container {
+    display: flex;
     justify-content: center;
   }
 
-  .algae-soap img {
+  .img-product-container img {
     height: 500px;
     margin-bottom: 20px;
     border-radius: 8px;
@@ -427,7 +426,7 @@ footer {
     align-items: center;
   }
 
-  .algae-soap-responsive {
+  .img-product-container-responsive {
     display: none;
   }
 
@@ -459,7 +458,7 @@ footer {
   .basket img {
     height: 400px;
   }
-  
+
   /* FOOTER */
   .mainfooter {
     width: 100%;

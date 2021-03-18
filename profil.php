@@ -6,23 +6,23 @@
 <hr>
 
 <section class="profil">
-    <h1>PROFIL</h1>
+    <h2>PROFIL</h2>
     <div class="deconnexion">
         <hr>
         <a href=""><p>Se déconnecter</p></a>
     </div>
     <div class="profile">
         <div class="profil-content">
-            <h6><u><strong>MES INFORMATIONS</strong></u></h6>
+            <h3><u><strong>MES INFORMATIONS</strong></u></h3>
         </div>
         <div class="profil-content">
-            <h6>MES COMMANDES</h6>
+            <h3>MES COMMANDES</h3>
         </div>
         <div class="profil-content">
-            <h6>MAGASINS</h6>
+            <h3>MAGASINS</h3>
         </div>
         <div class="profil-content">
-            <h6>MES AVANTAGES CLIENT</h6>
+            <h3>MES AVANTAGES CLIENT</h3>
         </div>
     </div>
 </section>

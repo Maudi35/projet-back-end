@@ -7,18 +7,18 @@
 
 <div class="all-product-page">
     <section class="product-img">
-        <div class="algae-soap">
+        <div class="img-product-container">
             <img src="asset/image-backend/roll.jpg" alt="roll anti stress dans une main"> 
         </div>
-        <div class="algae-soap-responsive">
+        <div class="img-product-container-responsive">
             <img src="asset/image-backend/hero.jpg" alt="roll antistress posé">
         </div>
-        <div class="algae-soap-responsive">
+        <div class="img-product-container-responsive">
             <img src="asset/image-backend/roll-2.jpeg" alt="roll anti-stress">
         </div>
     </section>
     <section class="product-caption">
-        <h3>ROLL ANTI-STRESS</h3> 
+        <h2>ROLL ANTI-STRESS</h2> 
         <hr>
         <div class="description">
             <p>ELIMINE TENSIONS</p>

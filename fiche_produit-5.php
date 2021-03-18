@@ -7,18 +7,18 @@
 
 <div class="all-product-page">
     <section class="product-img">
-        <div class="algae-soap">
+        <div class="img-product-container">
             <img src="asset/image-backend/brosse-a-dents.jpg" alt="dentifrice blancheur"> 
         </div>
-        <div class="algae-soap-responsive">
+        <div class="img-product-container-responsive">
             <img src="asset/image-backend/brosse-a-dents-3.jpeg" alt="dentifrice blancheur tout usage">
         </div>
-        <div class="algae-soap-responsive">
+        <div class="img-product-container-responsive">
             <img src="asset/image-backend/brosse-a-dents-2.jpeg" alt=" dentifrice blancheur sur une feuille verte végétale">
         </div>
     </section>
     <section class="product-caption">
-        <h3>DENTIFRICE BLANCHEUR</h3> 
+        <h2>DENTIFRICE BLANCHEUR</h2> 
         <hr>
         <div class="description">
             <p>CRISTAUX MENTHE FRAICHE</p>

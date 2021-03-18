@@ -6,7 +6,7 @@
 <hr>
 
 <div class="container">
-  <h1 class="text-center mb-3">LOGIN</h1>
+  <h2 class="text-center mb-3">LOGIN</h2>
   <form action="" method="post">
     <div class="mb-3">
         <label for="pseudo" class="form-label">Pseudo</label>

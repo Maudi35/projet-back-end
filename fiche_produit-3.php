@@ -7,18 +7,18 @@
 
 <div class="all-product-page">
     <section class="product-img">
-        <div class="algae-soap">
+        <div class="img-product-container">
             <img src="asset/image-backend/elixir.jpg" alt="elix rosa"> 
         </div>
-        <div class="algae-soap-responsive">
+        <div class="img-product-container-responsive">
             <img src="asset/image-backend/elixir-rosa-2.jpeg" alt="elixir rosa vu d'au-dessus">
         </div>
-        <div class="algae-soap-responsive">
+        <div class="img-product-container-responsive">
             <img src="asset/image-backend/elixir-rosa-3.jpeg" alt="elixir rosa avec cotton">
         </div>
     </section>
     <section class="product-caption">
-        <h3>ELIXIR ROSA</h3> 
+        <h2>ELIXIR ROSA</h2> 
         <hr>
         <div class="description">
             <p>SOLUTION A L'EAU DE ROSE</p>

@@ -7,18 +7,18 @@
 
 <div class="all-product-page">
     <section class="product-img">
-        <div class="algae-soap">
-            <img src="asset/image-backend/kit-bien-etre.jpg" alt="kit bien être"> 
+        <div class="img-product-container">
+            <img src="asset/image-backend/kit-relaxant-parfume.jpg" alt="kit relaxant parfumé"> 
         </div>
-        <div class="algae-soap-responsive">
-            <img src="asset/image-backend/kit-bien-etre-2.jpeg" alt="kit bien-être, savon et une bougie">
+        <div class="img-product-container-responsive">
+            <img src="asset/image-backend/kit-relaxant-parfume-2.jpeg" alt="kit relaxant parfumé, savon et une bougie">
         </div>
-        <div class="algae-soap-responsive">
-            <img src="asset/image-backend/kit-bien-etre-3.jpeg" alt="kit bien être creme hydratante, bougie, parfum">
+        <div class="img-product-container-responsive">
+            <img src="asset/image-backend/kit-relaxant-parfume-3.jpeg" alt="kit relaxant parfumé creme hydratante, bougie, parfum">
         </div>
     </section>
     <section class="product-caption">
-        <h3>KIT RELAXANT PARFUMÉ</h3> 
+        <h2>KIT RELAXANT PARFUMÉ</h2> 
         <hr>
         <div class="description">
             <p>A PERSONNALISER</p>

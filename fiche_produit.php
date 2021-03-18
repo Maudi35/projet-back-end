@@ -7,18 +7,18 @@
 
 <div class="all-product-page">
     <section class="product-img">
-        <div class="algae-soap">
-            <img src="asset/image-backend/savon-algues.jpg" alt="hydra beauty"> 
+        <div class="img-product-container">
+            <img src="asset/image-backend/savon-algues.jpg" alt="savon aux algues camelia water clean"> 
         </div>
-        <div class="algae-soap-responsive">
-            <img src="asset/image-backend/savon-algues-2.jpeg" alt="hydra beauty">
+        <div class="img-product-container-responsive">
+            <img src="asset/image-backend/savon-algues-2.jpeg" alt="savon aux algues camelia water clean avec brosse">
         </div>
-        <div class="algae-soap-responsive">
-            <img src="asset/image-backend/savon-algues-3.jpeg" alt="hydra beauty">
+        <div class="img-product-container-responsive">
+            <img src="asset/image-backend/savon-algues-3.jpeg" alt="savon aux algues camelia water clean dans la salle de bain">
         </div>
     </section>
     <section class="product-caption">
-        <h3>SAVON AUX ALGUES CAMELLIA WATER CLEAN</h3> 
+        <h2>SAVON AUX ALGUES CAMELLIA WATER CLEAN</h2> 
         <hr>
         <div class="description">
             <p>SAVON HYDRATANT MATIFIANT</p>

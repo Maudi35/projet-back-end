@@ -1,6 +1,6 @@
 <nav class="navbar">
     <div class="navbar-left">
-        <a class="nav-desktop" href="index.php">COSMETICS</a>
+        <a class="nav-desktop" href="index.php"><h1>COSMETICS</h1></a>
     </div>
     <div class="navbar-right">
         <a class="nav-desktop" href="inscription.php">Inscription</a>

@@ -7,18 +7,18 @@
 
 <div class="all-product-page">
     <section class="product-img">
-        <div class="algae-soap">
-            <img src="asset/image-backend/kit-ongle.jpg" alt="kit sublime ongle dans une salle de bain"> ç
+        <div class="img-product-container">
+            <img src="asset/image-backend/kit-ongle.jpg" alt="kit sublime ongle dans une salle de bain"> 
         </div>
-        <div class="algae-soap-responsive">
+        <div class="img-product-container-responsive">
             <img src="asset/image-backend/kit-ongle-2.jpeg" alt="kit sublime ongle à côté d'un miroir">
         </div>
-        <div class="algae-soap-responsive">
+        <div class="img-product-container-responsive">
             <img src="asset/image-backend/kit-ongle-3.jpeg" alt="kit sublime ongle sur le lavabo">
         </div>
     </section>
     <section class="product-caption">
-        <h3>KIT SUBLIME ONGLES</h3> 
+        <h2>KIT SUBLIME ONGLES</h2> 
         <hr>
         <div class="description">
             <p>BASE -VERNIS - TOP COAT</p>
