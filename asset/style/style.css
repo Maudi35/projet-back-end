@@ -1,11 +1,15 @@
+/* GLOBAL */
+
 * {
   padding: 0;
   margin: 0;
+  box-sizing: border-box;
 }
 
 body {
   margin: 0;
   padding: 0;
+  font-family: 'Neue Haas Grotesk', sans-serif;
 }
 
 a {
@@ -30,6 +34,17 @@ ul {
   width: 100%;
 }
 
+hr {
+  width: 100%;
+}
+
+h1 {
+  color: black; 
+  font-weight: bold;
+  text-align: center;
+  margin: 10px;
+}
+
 /* NAVBAR  */
 
 .navbar-right {
@@ -45,6 +60,7 @@ ul {
 
 .navbar-right a {
   margin: 10px;
+  font-weight: bold;
 }
 
 /* HOME */
@@ -60,9 +76,18 @@ ul {
 
 .home-product {
   display: flex;
-  flex-wrap: wrap;
+  flex-direction: column;
+  align-items: center;
   justify-content: space-around;
   width: 100%;
+}
+
+.home-product h2 {
+  font-weight: bold;
+}
+
+.products a {
+  font-weight: bold;
 }
 
 .product-description {
@@ -70,12 +95,6 @@ ul {
   flex-wrap: wrap;
   justify-content: space-around;
   margin-top: 10px;
-}
-
-.home-product h2 {
-  width: 100%;
-  font-weight: bold;
-  text-align: center;
 }
 
 .img-product {
@@ -125,18 +144,32 @@ ul {
   justify-content: space-between;
 }
 
+.quantity {
+  display: flex;
+  justify-content: space-between;
+  margin: 5px;
+}
+
 /* PROFIL */
 
-.profil {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
 .deconnexion p {
   width: 100%;
   margin: -10px;
   text-align: right;
+  color: grey;
 }
+
+.profil {
+  padding: 30px 0 200px; 
+}
+
+.profil-content {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  margin: 10px;
+}
+
 
 /* LOGIN ET INSCRIPTION */
 
@@ -163,19 +196,33 @@ input {
   margin-bottom: 20px;
 }
 
-.button-container {
+.button-registration {
   width: 100%;
   display: flex;
   justify-content: center;
 }
 
+.check {
+  display: flex; 
+  flex-direction: row;
+  width: 100%;
+  margin-top: 10px;
+}
+
+.rights {
+  margin: 5px;
+}
+
+input[type="checkbox"] {
+  margin: 5px;
+}
 /* PANIER  */
 
 .basket {
   text-align: center;
 }
 
-.img-panier img {
+.img-basket img {
   width: 100%;
   height: 300px;
   object-fit: cover;
@@ -260,9 +307,10 @@ footer {
   color: black;
   border-radius: 5px;
   padding: 3px;
-  margin: 5px;
+  margin-bottom: 5px;
   text-align: center;
   justify-content: center;
+  font-size: 13px;
 }
 
 .social-media h5 {
@@ -272,13 +320,7 @@ footer {
 
 /* RESPONSIVE  */
 @media screen and (min-width: 800px) {
-  .profil {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    width: 100%;
-  }
-
+  
   .profil h6 {
     margin: 20px;
   }
@@ -344,38 +386,45 @@ footer {
     margin-bottom: 20px;
   }
 
-  .fullscreen-content {
-    max-width: 350px;
-    margin: 100px;
-  }
-
-  .home-product {
+  .products {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    flex-direction: row;
     width: 75%;
   }
+
   /*LOGIN ET INSCRIPTION*/
   .container {
     width: 50%;
   }
 
   /* PROFIL */
+
   .profil h6 {
     margin: 20px;
   }
 
-  .profil {
+  .profile {
     display: flex;
     flex-direction: row;
     justify-content: center;
-    width: 100%;
   }
 
   /* Page produit */
 
-  .algae-soap img {
-    object-fit: contain;
+  .algae-soap {
+    display: flex; 
     justify-content: center;
+  }
+
+  .algae-soap img {
     height: 500px;
-    margin: 10px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    object-fit: contain;
+    width: auto;
+    align-items: center;
   }
 
   .algae-soap-responsive {
@@ -385,6 +434,17 @@ footer {
   .all-product-page {
     display: flex;
     flex-direction: row;
+    align-content: space-around;
+  }
+
+  .quantity {
+    display: flex;
+    justify-content: space-between;
+    margin: 5px;
+  }
+
+  input[type="number"] {
+    padding: 5px;
   }
 
   /* PANIER */
@@ -393,10 +453,13 @@ footer {
   }
 
   .subtotal {
-    /*border-radius: 10px;*/
     width: 50%;
   }
 
+  .basket img {
+    height: 400px;
+  }
+  
   /* FOOTER */
   .mainfooter {
     width: 100%;

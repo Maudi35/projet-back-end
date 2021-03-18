@@ -5,12 +5,12 @@
 <!--<h2 class="text-center mt-5 mb-5">Page panier</h2>-->
 <hr>
 
-<!-- HTML -->
-<div class="img-panier">
+
+<div class="img-basket">
     <img src="asset/image-backend/image-panier-cosmetics.jpeg"> 
 </div>
 <section class="basket">
-    <h2>PANIER</h2>
+    <h1>PANIER</h1>
     <hr>
     <img src="asset/image-backend/savon-algues.jpg">
     <hr>

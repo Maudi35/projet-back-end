@@ -2,12 +2,13 @@
 <header>
     <?php include 'config/template/nav.php'; ?>
 </header>
-<!--<h2 class="text-center mt-5 mb-5">Page Accueil</h2>-->
-<body> 
-    <main>
+
+<main>
     <div class="fullscreen-image"></div>
     <section class="home-product">
         <h2>TOUS NOS PRODUITS</h2>
+        <hr>
+    <div class="products">
         <article class="product">
             <img class="img-product" src="asset/image-backend/savon-algues.jpg" alt="">
             <div class="product-description">
@@ -33,15 +34,15 @@
             <img class="img-product" src="asset/image-backend/kit-ongle.jpg" alt="">
             <div class="product-description">
             <a href="fiche_produit-4.php"><p>Kit sublime ongles</p></a>
-            <p class="price">17 €</p>
+            <p class="price">40 €</p>
             </div>
         </article>
         <article class="product">
-             <img class="img-product" src="asset/image-backend/brosse-a-dents.jpg" alt="">
-             <div class="product-description">
+            <img class="img-product" src="asset/image-backend/brosse-a-dents.jpg" alt="">
+            <div class="product-description">
                 <a href="fiche_produit-5.php"><p>Dentifrice blancheur</p></a>
-                <p class="price">12 €</p>
-             </div>
+                <p class="price">15 €</p>
+            </div>
         </article>
         <article class="product">
             <img class="img-product" src="asset/image-backend/kit-bien-etre.jpg" alt="">
@@ -50,9 +51,9 @@
                 <p class="price">45 €</p>
             </div>
         </article>
-    </section> 
-    </main>
-</body> 
+    </section>
+    </div>
+</main>
 
 <?php include 'config/template/footer.php'; ?>
 

@@ -7,7 +7,6 @@
 
 <div class="all-product-page">
     <section class="product-img">
-    <!-- ici on a les trois images à la suite du produit  -->
         <div class="algae-soap">
             <img src="asset/image-backend/roll.jpg" alt="roll anti stress dans une main"> 
         </div>
@@ -23,7 +22,11 @@
         <hr>
         <div class="description">
             <p>ELIMINE TENSIONS</p>
-            <p class="price">25 €</p>
+            <p class="price">17 €</p>
+        </div>
+        <div class="quantity">
+            <p>Quantité</p>
+            <input type="number" id="tentacles" name="tentacles" min="0" max="10">
         </div>
         <div class="add-to-cart">
             <input type="button" value="Ajouter au panier">

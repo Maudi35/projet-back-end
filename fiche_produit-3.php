@@ -7,7 +7,6 @@
 
 <div class="all-product-page">
     <section class="product-img">
-    <!-- ici on a les trois images à la suite du produit  -->
         <div class="algae-soap">
             <img src="asset/image-backend/elixir.jpg" alt="elix rosa"> 
         </div>
@@ -23,11 +22,15 @@
         <hr>
         <div class="description">
             <p>SOLUTION A L'EAU DE ROSE</p>
-            <p class="price">25 €</p>
+            <p class="price">35 €</p>
+        </div>
+        <div class="quantity">
+            <p>Quantité</p>
+            <input type="number" id="tentacles" name="tentacles" min="0" max="10">
         </div>
         <div class="add-to-cart">
             <input type="button" value="Ajouter au panier">
-        </div>    
+        </div>
     </section>
 </div>
 
