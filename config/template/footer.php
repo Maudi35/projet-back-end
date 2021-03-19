@@ -1,4 +1,4 @@
-<script src="asset/script/script.js"></script>
+</main>
 
 <footer>
   <section class="mainfooter" id="contentfooter">
@@ -56,3 +56,5 @@
 </footer>
 
 <script src="asset/script/script.js"></script>
+<body>
+</html>

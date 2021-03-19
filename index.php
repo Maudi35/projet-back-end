@@ -3,7 +3,7 @@
     <?php include 'config/template/nav.php'; ?>
 </header>
 
-<main>
+
     <div class="fullscreen-image"></div>
     <section class="home-product">
         <h2>TOUS NOS PRODUITS</h2>
@@ -53,7 +53,7 @@
         </article>
     </section>
     </div>
-</main>
+
 
 <?php include 'config/template/footer.php'; ?>
 
