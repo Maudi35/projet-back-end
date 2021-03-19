@@ -10,10 +10,10 @@
         <div class="img-product-container">
             <img src="asset/image-backend/kit-relaxant-parfume.jpg" alt="kit relaxant parfumé"> 
         </div>
-        <div class="img-product-container-responsive">
+        <div class="img-product-container">
             <img src="asset/image-backend/kit-relaxant-parfume-2.jpeg" alt="kit relaxant parfumé, savon et une bougie">
         </div>
-        <div class="img-product-container-responsive">
+        <div class="img-product-container">
             <img src="asset/image-backend/kit-relaxant-parfume-3.jpeg" alt="kit relaxant parfumé creme hydratante, bougie, parfum">
         </div>
     </section>

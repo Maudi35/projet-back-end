@@ -10,10 +10,10 @@
         <div class="img-product-container">
             <img src="asset/image-backend/savon-algues.jpg" alt="savon aux algues camelia water clean"> 
         </div>
-        <div class="img-product-container-responsive">
+        <div class="img-product-container">
             <img src="asset/image-backend/savon-algues-2.jpeg" alt="savon aux algues camelia water clean avec brosse">
         </div>
-        <div class="img-product-container-responsive">
+        <div class="img-product-container">
             <img src="asset/image-backend/savon-algues-3.jpeg" alt="savon aux algues camelia water clean dans la salle de bain">
         </div>
     </section>

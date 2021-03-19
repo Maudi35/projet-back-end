@@ -10,10 +10,10 @@
         <div class="img-product-container">
             <img src="asset/image-backend/kit-ongle.jpg" alt="kit sublime ongle dans une salle de bain"> 
         </div>
-        <div class="img-product-container-responsive">
+        <div class="img-product-container">
             <img src="asset/image-backend/kit-ongle-2.jpeg" alt="kit sublime ongle à côté d'un miroir">
         </div>
-        <div class="img-product-container-responsive">
+        <div class="img-product-container">
             <img src="asset/image-backend/kit-ongle-3.jpeg" alt="kit sublime ongle sur le lavabo">
         </div>
     </section>

@@ -10,10 +10,10 @@
         <div class="img-product-container">
             <img src="asset/image-backend/roll.jpg" alt="roll anti stress dans une main"> 
         </div>
-        <div class="img-product-container-responsive">
+        <div class="img-product-container">
             <img src="asset/image-backend/hero.jpg" alt="roll antistress posé">
         </div>
-        <div class="img-product-container-responsive">
+        <div class="img-product-container   ">
             <img src="asset/image-backend/roll-2.jpeg" alt="roll anti-stress">
         </div>
     </section>

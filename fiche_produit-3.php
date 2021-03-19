@@ -10,10 +10,10 @@
         <div class="img-product-container">
             <img src="asset/image-backend/elixir.jpg" alt="elix rosa"> 
         </div>
-        <div class="img-product-container-responsive">
+        <div class="img-product-container">
             <img src="asset/image-backend/elixir-rosa-2.jpeg" alt="elixir rosa vu d'au-dessus">
         </div>
-        <div class="img-product-container-responsive">
+        <div class="img-product-container">
             <img src="asset/image-backend/elixir-rosa-3.jpeg" alt="elixir rosa avec cotton">
         </div>
     </section>

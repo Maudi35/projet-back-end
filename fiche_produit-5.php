@@ -10,10 +10,10 @@
         <div class="img-product-container">
             <img src="asset/image-backend/brosse-a-dents.jpg" alt="dentifrice blancheur"> 
         </div>
-        <div class="img-product-container-responsive">
+        <div class="img-product-container">
             <img src="asset/image-backend/brosse-a-dents-3.jpeg" alt="dentifrice blancheur tout usage">
         </div>
-        <div class="img-product-container-responsive">
+        <div class="img-product-container">
             <img src="asset/image-backend/brosse-a-dents-2.jpeg" alt=" dentifrice blancheur sur une feuille verte végétale">
         </div>
     </section>
