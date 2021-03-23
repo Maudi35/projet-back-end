@@ -1,7 +1,7 @@
 </main>
 
 <footer>
-  <section class="mainfooter" id="contentfooter">
+  <section class="footer">
     <div class="footer-right">
       <div class="colonne">
           <h5>NOS PRODUITS</h5>
@@ -44,11 +44,9 @@
         <div class="colonne">
           <h5>SUIVEZ-NOUS</h5>
         <div class="social-networks">
-          <!-- ajouter des icones pour les réseaux sociaux  -->
         </div>
-    <!--copyright-->
         <div class="copyright">
-              <p>COSMETICS - 2020</p>
+            <p>COSMETICS - 2020</p>
         </div>
       </div>
     </div>
@@ -56,5 +54,5 @@
 </footer>
 
 <script src="asset/script/script.js"></script>
-<body>
+</body>
 </html>

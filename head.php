@@ -1,6 +1,5 @@
 <?php
 require 'config/init.php';
-
 ?>
 
 <!DOCTYPE html>

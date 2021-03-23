@@ -1,5 +1,4 @@
 /* GLOBAL */
-
 * {
   padding: 0;
   margin: 0;
@@ -35,28 +34,26 @@ ul {
   width: 100%;
 }
 
-hr {
-  width: 100%;
-}
-
-h1 {
+h1, h2 {
   color: black;
   font-weight: bold;
   text-align: center;
   margin: 10px;
 }
 
+hr {
+  width: 100%;
+}
+
+input {
+  border: 0.5px black solid;
+  border-radius: 10px;
+}
+
 /* NAVBAR  */
 .navbar {
   display: flex;
   justify-content: center;
-  top: 0;
-  width: 100%;
-  height: 10vh;
-  background-color: #fff;
-  /* position: fixed; */
-  z-index: 1;
-  box-shadow: -20px -15px 20px black;
 }
 
 .navbar-right {
@@ -77,7 +74,6 @@ h1 {
 }
 
 /* HOME */
-
 .fullscreen-image {
   background: url("https://www.pexels.com/photo/3737599/download/?search_query=beauty%20products&tracking_id=8o2zbghxxlk");
   background-size: cover;
@@ -95,11 +91,7 @@ h1 {
   width: 100%;
 }
 
-.home-product h2 {
-  font-weight: bold;
-}
-
-.products a {
+.products a, .price  {
   font-weight: bold;
 }
 
@@ -116,12 +108,7 @@ h1 {
   height: 400px;
 }
 
-.price {
-  font-weight: bold;
-}
-
 /* FICHE PRODUIT */
-
 .all-product-page {
   display: flex;
   flex-direction: column;
@@ -162,38 +149,12 @@ h1 {
   margin: 5px;
 }
 
-/* PROFIL */
-
-.deconnexion p {
-  width: 100%;
-  margin: -10px;
-  text-align: right;
-  color: grey;
-}
-
-.profil {
-  padding: 30px 0 200px;
-}
-
-.profil-content {
-  display: flex;
-  flex-direction: column;
-  text-align: center;
-  margin: 10px;
-}
-
-/* LOGIN ET INSCRIPTION */
-
+/* LOGIN,INSCRIPTION & PROFIL*/
 .container {
   background-color: rgb(228, 228, 228);
   border-radius: 8px;
   margin-bottom: 20px;
   width: 90%;
-}
-
-input {
-  border: 0.5px black solid;
-  border-radius: 10px;
 }
 
 .login-registration {
@@ -205,6 +166,10 @@ input {
   cursor: pointer;
   text-align: center;
   margin-bottom: 20px;
+}
+
+.selection {
+  margin-bottom: 15px;
 }
 
 .button-registration {
@@ -227,8 +192,8 @@ input {
 input[type="checkbox"] {
   margin: 5px;
 }
-/* PANIER  */
 
+/* PANIER  */
 .basket {
   text-align: center;
 }
@@ -250,13 +215,6 @@ input[type="checkbox"] {
   text-decoration: underline;
 }
 
-.basket-content p {
-  display: flex;
-  flex-direction: row;
-  width: 100%;
-  justify-content: space-between;
-}
-
 .basket img {
   height: 300px;
   object-fit: contain;
@@ -269,7 +227,7 @@ input[type="checkbox"] {
   justify-content: space-between;
 }
 
-.total .bold {
+.bold {
   font-weight: bold;
 }
 
@@ -291,10 +249,7 @@ input[type="checkbox"] {
 }
 
 /* FOOTER  */
-
-.mainfooter,
-li,
-ul {
+.footer, li, ul {
   display: flex;
   flex-direction: column;
   text-align: center;
@@ -324,20 +279,10 @@ footer {
   font-size: 13px;
 }
 
-.social-media h5 {
-  text-align: center;
-  margin: 5px;
-}
-
 /* RESPONSIVE  */
 @media screen and (min-width: 768px) {
-  /*NAV*/
   .navbar {
     justify-content: space-between;
-  }
-
-  .profil h6 {
-    margin: 20px;
   }
 
   .newsletter {
@@ -346,18 +291,13 @@ footer {
     text-align: center;
   }
 
-  /* LOGIN ET INSCRIPTION */
-
+  /* LOGIN, INSCRIPTION & PROFIL */
   .container {
     width: 65%;
   }
 
-  .cart {
-    width: 50%;
-  }
-
   /* FOOTER */
-  .mainfooter {
+  .footer {
     width: 100%;
     display: flex;
     flex-direction: row;
@@ -380,8 +320,7 @@ footer {
     flex-direction: row;
   }
 
-  .colonne h5,
-  li {
+  .colonne h5, li {
     text-align: left;
   }
 
@@ -414,19 +353,7 @@ footer {
     width: 50%;
   }
 
-  /* PROFIL */
-
-  .profil h6 {
-    margin: 20px;
-  }
-
-  .profile {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-  }
-
-  /* Page produit */
+  /* PAGE PRODUIT */
   .product-img {
     margin-bottom: 50px;
   }
@@ -473,7 +400,7 @@ footer {
   }
 
   /* FOOTER */
-  .mainfooter {
+  .footer {
     width: 100%;
     display: flex;
     flex-direction: row;
@@ -495,13 +422,5 @@ footer {
     display: flex;
     flex-direction: row;
   }
-
-  .colonne h5,
-  li {
-    text-align: left;
-  }
-
-  footer li {
-    font-size: 15px;
-  }
 }
+
