@@ -6,13 +6,13 @@
 <div class="all-product-page">
 	<section class="product-img">
 		<div class="img-product-container">
-			<img src="asset/image-backend/savon-algues.jpg" alt="savon aux algues camelia water clean">
+			<img src="asset/img-backend-webp/savon-algues.webp" alt="savon aux algues camelia water clean">
 		</div>
 		<div class="img-product-container">
-			<img src="asset/image-backend/savon-algues-2.jpeg" alt="savon aux algues camelia water clean avec brosse">
+			<img src="asset/img-backend-webp/savon-algues-2.webp" alt="savon aux algues camelia water clean avec brosse">
 		</div>
 		<div class="img-product-container">
-			<img src="asset/image-backend/savon-algues-3.jpeg" alt="savon aux algues camelia water clean dans la salle de bain">
+			<img src="asset/img-backend-webp/savon-algues-3.webp" alt="savon aux algues camelia water clean dans la salle de bain">
 		</div>
 	</section>
 	<section class="product-caption">

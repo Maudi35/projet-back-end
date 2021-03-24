@@ -1,3 +1,9 @@
+@font-face {
+  font-family: "Neue Haas Display";
+  src: url("asset/font/NeueHaasDisplay-Black.woff2") format("woff2"),
+    url("asset/font/NeueHaasDisplay-Black.woff") format("woff");
+}
+
 /* GLOBAL */
 * {
   padding: 0;
@@ -8,7 +14,7 @@
 body {
   margin: 0;
   padding: 0;
-  font-family: "Neue Haas Grotesk", sans-serif;
+  font-family: "Neue Haas Display", sans-serif;
 }
 
 a {
@@ -34,7 +40,8 @@ ul {
   width: 100%;
 }
 
-h1, h2 {
+h1,
+h2 {
   color: black;
   font-weight: bold;
   text-align: center;
@@ -91,7 +98,8 @@ input {
   width: 100%;
 }
 
-.products a, .price  {
+.products a,
+.price {
   font-weight: bold;
 }
 
@@ -249,7 +257,9 @@ input[type="checkbox"] {
 }
 
 /* FOOTER  */
-.footer, li, ul {
+.footer,
+li,
+ul {
   display: flex;
   flex-direction: column;
   text-align: center;
@@ -320,7 +330,8 @@ footer {
     flex-direction: row;
   }
 
-  .colonne h5, li {
+  .colonne h5,
+  li {
     text-align: left;
   }
 
@@ -423,4 +434,3 @@ footer {
     flex-direction: row;
   }
 }
-
