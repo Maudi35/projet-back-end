@@ -1,7 +1,7 @@
 <?php include 'config/template/head.php'; ?>
-<header>
-	<?php include 'config/template/nav.php'; ?>
-</header>
+<?php include 'config/template/nav.php'; ?>
+
+
 
 <div class="fullscreen-image"></div>
 <section class="home-product">
@@ -25,7 +25,7 @@
 		<article class="product">
 			<a href="fiche_produit-3.php"><img class="img-product" src="asset/img-backend-webp/elixir.webp" alt="elixir rosa"></a>
 			<div class="product-description">
-				<a href="fiche_produit-3.php"><p>Elixir Rosa</p></a>
+				<a href="fiche_produit-3.php">Elixir Rosa</a>
 				<p class="price">35 €</p>
 			</div>
 		</article>
@@ -52,6 +52,6 @@
         </article>
     </div>
 </section>
-</div>
+
 
 <?php include 'config/template/footer.php'; ?>

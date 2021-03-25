@@ -37,7 +37,6 @@ ul {
   display: flex;
   flex-direction: row;
   align-content: space-between;
-  width: 100%;
 }
 
 h1,
@@ -122,10 +121,10 @@ input {
   flex-direction: column;
 }
 
-.img-product-container img {
+.img-product-container {
   height: 100%;
-  width: 100%;
-  object-fit: contain;
+  width: 400px;
+  object-fit: cover;
   justify-content: center;
 }
 
@@ -257,8 +256,7 @@ input[type="checkbox"] {
 }
 
 /* FOOTER  */
-.footer,
-li,
+footer li,
 ul {
   display: flex;
   flex-direction: column;
