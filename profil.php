@@ -1,7 +1,6 @@
 <?php include 'config/template/head.php'; ?>
-<header>
-	<?php include 'config/template/nav.php'; ?>
-</header>
+<?php include 'config/template/nav.php'; ?>
+
 
 <hr>
 <section class="container">
@@ -22,13 +21,12 @@
 		<div class="mb-3">
 			<label for="password" class="form-label">Nouveau mot de passe</label>
 			<input type="password" class="form-control" id="new-password" name="new-password">
-        </div>
-        <div class=button-registration>
-          <input type="submit" value="Enregistrer les informations" class="login-registration" name="envoyer" id="exampleInputEmail1">
-        </div>
-    </form>
+		</div>
+		<div class=button-registration>
+			<input type="submit" value="Enregistrer les informations" class="login-registration" name="envoyer"
+				id="exampleInputEmail1">
+		</div>
+	</form>
 </section>
 
 <?php include 'config/template/footer.php'; ?>
-
-

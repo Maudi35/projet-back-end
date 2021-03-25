@@ -1,7 +1,7 @@
 </main>
 
-<footer class="footer">
-  <div class="footer-right">
+<footer>
+  <div class="footer-left">
     <div class="colonne">
       <h4>NOS PRODUITS</h4>
       <ul>
@@ -23,7 +23,7 @@
       </ul>
     </div>
     <div class="colonne">
-      <h5>AIDE</h5>
+      <h4>AIDE</h4>
       <ul>
         <li>Plan du site</li>
         <li>Mentions légales</li>
@@ -31,23 +31,17 @@
       </ul>
     </div>
   </div>
-  <div class="footer-left">
+  <div class="footer-right">
     <div class="colonne">
-      <div class="newsletter">
-        <h4>NEWSLETTER</h4>
-        <form>
-          <input type="text" name="text" placeholder="Entrez votre email">
-          <input type="submit" name="envoyer">
-        </form>
-      </div>
+      <h4>NEWSLETTER</h4>
+      <form action="" method="post">
+        <input type="text" name="text" placeholder="Entrez votre email" class="newsletter-input">
+        <input type="submit" name="envoyer" class="newsletter-input">
+      </form>
     </div>
     <div class="colonne">
       <h4>SUIVEZ-NOUS</h4>
-      <div class="social-networks">
-      </div>
-      <div class="copyright">
-        <p>COSMETICS - 2020</p>
-      </div>
+      <p>COSMETICS - 2020</p>
     </div>
   </div>
 </footer>
