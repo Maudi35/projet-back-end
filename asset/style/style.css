@@ -402,16 +402,6 @@ footer {
     height: 400px;
   }
 
-  /*PROFIL*/
-  .input-flex {
-    display: inline-block;
-    flex-direction: row;
-  }
-
-  .input-style {
-    width: 50%;
-  }
-
   /* FOOTER */
   footer {
     width: 100%;
