@@ -217,9 +217,11 @@ input[type="checkbox"] {
 }
 
 .basket-quantity {
-  display: flex;
   width: 100%;
-  justify-content: space-between;
+}
+
+.basket-product {
+  display: flex;
 }
 
 .basket-quantity a {
@@ -234,7 +236,7 @@ input[type="checkbox"] {
 }
 
 .basket img {
-  height: 300px;
+  height: 60px;
   object-fit: contain;
   border-radius: 8px;
   margin-bottom: 10px;
@@ -399,7 +401,12 @@ footer {
   }
 
   .basket img {
-    height: 400px;
+    height: 80px;
+  }
+
+  .product-name-basket {
+    width: 80%;
+    justify-content: start;
   }
 
   /* FOOTER */
