@@ -1,6 +1,6 @@
 <?php 
 
-$pdo = new PDO('mysql:dbname=cosmetics;host=localhost', 'root', 'root'); 
+$pdo = new PDO('mysql:dbname=cosmetics;host=localhost', 'root', ''); 
 
 // Je veux accèder à la constante ATTR_ERRMODE qui se situe dans PDO 
 // Errmode_Exception : PDO renvoie une exception en cas d'erreur 

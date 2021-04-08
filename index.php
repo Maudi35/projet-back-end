@@ -4,17 +4,17 @@
 <?php include 'pdo.php'; ?>
 
 <?php
-// The amounts of products to show on each page
+// Définition de la quantité de produits à montrer sur chaque page
 $num_products = 6;
-// The current page, in the URL this will appear as index.php?page=products&p=1, index.php?page=products&p=2, etc...
+// La page actuelle, dans l'url va appraitre en tant que index.php?page=products&p=1  puis index.php?page=products&p=2 etc...
 $current_page = isset($_GET['p']) && is_numeric($_GET['p']) ? (int)$_GET['p'] : 1;
-// Select products ordered by the id added
+// Sélectionner les produits par ordre croissant d'id ajoutée 
 $stmt = $pdo->prepare('SELECT * FROM products ORDER BY id ASC LIMIT ?,?');
-// bindValue will allow us to use integer in the SQL statement, we need to use for LIMIT
+// bindValue permet d'utiliser un entier en instruction sql,  we need to use for LIMIT
 $stmt->bindValue(1, ($current_page - 1) * $num_products, PDO::PARAM_INT);
 $stmt->bindValue(2, $num_products, PDO::PARAM_INT);
 $stmt->execute();
-// Fetch the products from the database and return the result as an Array
+// Récupère les produits dans la base de données et les retourne en tant que rang  
 $products = $stmt->fetchAll(PDO::FETCH_ASSOC);?>
 
 <div class="fullscreen-image"></div>
@@ -24,6 +24,7 @@ $products = $stmt->fetchAll(PDO::FETCH_ASSOC);?>
 	<div class="products">
 
 <article class="product" aria-label="<?=$products['name']?>">
+<!-- Chaque produit sera affiché sur la page d'accueil avec ses informations associées -->
 <?php foreach ($products as $product): ?>
 			<a href="fiche_produit.php?page=product&id=<?=$product['id']?>"><?=$product['name']?>
 			<img class="img-product" src="asset/img-backend-webp/<?=$product['img']?>"

@@ -4,20 +4,20 @@
 <?php include 'pdo.php';?>
 
 <?php
-// Check to make sure the id parameter is specified in the URL
+// Vérifier que le id est bien renseigné dans l'url 
 if (isset($_GET['id'])) {
-    // Prepare statement and execute, prevents SQL injection
+    // Prépare l'instruction et exécute, évite les injections sql
     $stmt = $pdo->prepare('SELECT * FROM products WHERE id = ?');
     $stmt->execute([$_GET['id']]);
-    // Fetch the product from the database and return the result as an Array
+    // Récupère le produit dans la base de données et déclare le résultat sous forme de rang 
     $product = $stmt->fetch(PDO::FETCH_ASSOC);
-    // Check if the product exists (array is not empty)
+    // Vérifier si le produit existe et donc si le rang n'est pas vide
     if (!$product) {
-        // Simple error to display if the id for the product doesn't exists (array is empty)
+        // Renvoie un message d'erreur si l'id du produit n'existe pas 
         exit('Product does not exist!');
     }
 } else {
-    // Simple error to display if the id wasn't specified
+    // Si l'id n'était pas spécifié alors cela renvoi un message d'erreur
     exit('Product does not exist!');
 }
 ?>

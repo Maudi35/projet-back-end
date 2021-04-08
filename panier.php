@@ -4,56 +4,54 @@
 <?php include 'pdo.php';?>
 
 <?php
-// If the user clicked the add to cart button on the product page we can check for the form data
-// if(isset($_GET['delete'])){
-    
-// }
+
+// DECLARATION DES VARIABLES ET AJOUT DE PRODUIT AU PANIER
 if (isset($_POST['product_id'], $_POST['quantity']) && is_numeric($_POST['product_id']) && is_numeric($_POST['quantity'])) {
-    // Set the post variables so we easily identify them, also make sure they are integer
+    // Déclarer les variables en s'assurant qu'elles soient de type chiffre 
     $product_id = (int)$_POST['product_id'];
     $quantity = (int)$_POST['quantity'];
-    // Prepare the SQL statement, we basically are checking if the product exists in our databaser
+    // Préparer la requête SQL, on vérifie que le produit soit dans la base de données
     $stmt = $pdo->prepare('SELECT * FROM products WHERE id = ?');
     $stmt->execute([$_POST['product_id']]);
-    // Fetch the product from the database and return the result as an Array
+    // Récupérer les produits de la base de données et les retourner en tant qu'array 
     $product = $stmt->fetch(PDO::FETCH_ASSOC);
-    // Check if the product exists (array is not empty)
+    // Vérifier si le produit existe 
     if ($product && $quantity > 0) {
-        // Product exists in database, now we can create/update the session variable for the cart
+        // Puisque le produit existe dans la base de données on peut créer et mettre à jour la variable session pour le panier 
         if (isset($_SESSION['cart']) && is_array($_SESSION['cart'])) {
             if (array_key_exists($product_id, $_SESSION['cart'])) {
-                // Product exists in cart so just update the quanity
+                // Le produit est dans le panier donc on met à jour la quantité 
                 $_SESSION['cart'][$product_id] += $quantity;
             } else {
-                // Product is not in cart so add it
+                // Le produit n'est pas dans le panier alors on l'ajoute
                 $_SESSION['cart'][$product_id] = $quantity;
             }
         } else {
-            // There are no products in cart, this will add the first product to cart
+            // Il n'y a pas de produit dans le panier, on ajoute le premier produit dedans 
             $_SESSION['cart'] = array($product_id => $quantity);
         }
     }
 }
 
-    // Remove product from cart, check for the URL param "remove", this is the product id, make sure it's a number and check if it's in the cart
+// SUPPRIME LES PRODUITS DU PANIER
+    // Supprimer le produit du panier, vérifier les paramètres de l'url delete, l'id est un nombre et s'assurer que l'id soit dans le panier  
     if (isset($_GET['delete']) && is_numeric($_GET['delete']) && isset($_SESSION['cart']) && isset($_SESSION['cart'][$_GET['delete']])) {
-        // Remove the product from the shopping cart
+        // Supprime le produit du panier
         unset($_SESSION['cart'][$_GET['delete']]);
         $quantity=0;
     }
 
-    
-    // Update product quantities in cart if the user clicks the "Update" button on the shopping cart page
+//MISE A JOUR DU PANIER AVEC LE BOUTON DE MISE A JOUR CHANGER LES QUANTITES DEPUIS LE PANIER
+    // Met à jour les quantités quand l'utilisateur clique sur le bouton "update" 
 if (isset($_POST['update']) && isset($_SESSION['cart'])) {
-    // Loop through the post data so we can update the quantities for every product in cart
+    // Faire une boucle à travers les données publiées pour pouvoir mettre à jour chaque produit dans le panier  
     foreach ($_POST as $k => $v) {
         if (strpos($k, 'quantity') !== false && is_numeric($v)) {
             $id = str_replace('quantity-', '', $k);
-            $quantity = intval($v);
-            
-            // Always do checks and validation
+            $quantity = intval($v);   
+            // Vérifier et valider
             if (is_numeric($id) && isset($_SESSION['cart'][$id]) && $quantity > 0) {
-                // Update new quantity
+                // Mettre à jour la nouvelle quantité
                 $_SESSION['cart'][$id] = $quantity;
             }
         }
@@ -62,21 +60,21 @@ if (isset($_POST['update']) && isset($_SESSION['cart'])) {
     exit;
 }
 
-// Check the session variable for products in cart
+// Vérifier la variable session pour les produits du panier 
 $products_in_cart = isset($_SESSION['cart']) ? $_SESSION['cart'] : array();
 $products = array();
 $subtotal = 0.00;
-// If there are products in cart
+// S'il y a des produits dans le panier
 if ($products_in_cart) {
-    // There are products in the cart so we need to select those products from the database
+    // Il y a des produits dans le panier donc il faut sélectionner ceux de la base de données 
     // Products in cart array to question mark string array, we need the SQL statement to include IN (?,?,?,...etc)
     $array_to_question_marks = implode(',', array_fill(0, count($products_in_cart), '?'));
     $stmt = $pdo->prepare('SELECT * FROM products WHERE id IN (' . $array_to_question_marks . ')');
-    // We only need the array keys, not the values, the keys are the id's of the products
+    //Juste besoin des array keys mais pas des valeurs, les keys sont les id des produits
     $stmt->execute(array_keys($products_in_cart));
-    // Fetch the products from the database and return the result as an Array
+    // Récupère le produit de la base de données et le retourne en tant qu'array 
     $products = $stmt->fetchAll(PDO::FETCH_ASSOC);
-    // Calculate the subtotal
+    // Calcul du sous-total
     foreach ($products as $product) {
         $subtotal += (float)$product['price'] * (int)$products_in_cart[$product['id']];
     }
