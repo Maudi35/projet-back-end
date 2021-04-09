@@ -22,7 +22,6 @@ if (isset($_GET['id'])) {
 }
 ?>
 
-
 <div class="all-product-page">
 	<section class="product-img" aria-label="Images produits">
 		<img class="img-product-container" src="asset/img-backend-webp/<?=$product['img']?>"

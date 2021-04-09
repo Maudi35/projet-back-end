@@ -88,7 +88,7 @@ input {
   display: flex;
   flex-direction: column; 
   text-align: center;
-
+  align-items: center;
 }
 
 .products a,
@@ -350,11 +350,7 @@ footer {
     flex-direction: row;
   }
 
-  .colonne h4,
-  li,
-  p {
-    text-align: left;
-  }
+
 
   .newsletter-input {
     width: 100%;
@@ -381,7 +377,7 @@ footer {
     flex-wrap: wrap;
     justify-content: space-around;
     flex-direction: row;
-    width: 75%;
+    width: 80%;
   }
 
   /*LOGIN ET INSCRIPTION*/

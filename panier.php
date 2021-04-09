@@ -108,7 +108,7 @@ if ($products_in_cart) {
                 <input class="product-quantity" type="number" name="quantity-<?=$product['id']?>" 
                 value="<?=$products_in_cart[$product['id']]?>" min="1" max="<?=$product['quantity']?>" placeholder="Quantity" required> 
         <a href="panier.php?page=panier=cart&delete=<?= $product['id']?>" value="Supprimer" id="delete" name="delete" class="delete-input">Supprimer</a> 
-            <!-- Prix du produit -->
+        <!-- Prix du produit -->
     </div>
         <?php endforeach; ?>
                 <?php endif; ?>
