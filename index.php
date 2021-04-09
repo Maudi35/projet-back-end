@@ -40,6 +40,8 @@ $products = $stmt->fetchAll(PDO::FETCH_ASSOC);?>
 
 <?php include 'config/template/footer.php';?>
 
+
+<!-- FAUT QUE CA MARCHE PUTAIN -->
 <!-- <article class="product" aria-label="Roll anti-stress">
 			<a href="fiche_produit-2.php"><img class="img-product" src="asset/img-backend-webp/roll.webp"
 					alt="roll anti stress"></a>
