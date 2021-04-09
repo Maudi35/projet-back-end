@@ -39,3 +39,4 @@ $products = $stmt->fetchAll(PDO::FETCH_ASSOC);?>
 
 <?php include 'config/template/footer.php';?>
 
+<!-- test push -->
