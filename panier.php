@@ -99,21 +99,21 @@ if ($products_in_cart) {
     <?php foreach ($products as $product): ?>
     <!-- Image produit -->
     <div class="basket-product">
-    <a href="panier.php?page=fiche_produit&id=<?=$product['id']?>">
-    <img src="asset/img-backend-webp/<?=$product['img']?>" alt="<?=$product['alt']?>">
-    </a>
-    <!-- Nom produit -->
-    <a class="product-name-basket" href="fiche_produit.php?page=product&id=<?=$product['id']?>"><?=$product['name']?></a>   
-            <input class type="number" name="quantity-<?=$product['id']?>" 
-            value="<?=$products_in_cart[$product['id']]?>" min="1" max="<?=$product['quantity']?>" placeholder="Quantity" required> 
+        <a href="panier.php?page=fiche_produit&id=<?=$product['id']?>">
+        <img src="asset/img-backend-webp/<?=$product['img']?>" alt="<?=$product['alt']?>">
+        <p class="basket-price">&euro;<?=$product['price'] * $products_in_cart[$product['id']]?></p>
+        </a>
+        <!-- Nom produit -->
+        <a class="product-name-basket" href="fiche_produit.php?page=product&id=<?=$product['id']?>"><?=$product['name']?></a>   
+                <input class="product-quantity" type="number" name="quantity-<?=$product['id']?>" 
+                value="<?=$products_in_cart[$product['id']]?>" min="1" max="<?=$product['quantity']?>" placeholder="Quantity" required> 
         <a href="panier.php?page=panier=cart&delete=<?= $product['id']?>" value="Supprimer" id="delete" name="delete" class="delete-input">Supprimer</a> 
-        <!-- Prix du produit -->
-        <p>&euro;<?=$product['price'] * $products_in_cart[$product['id']]?></p>
+            <!-- Prix du produit -->
     </div>
         <?php endforeach; ?>
                 <?php endif; ?>
     </div>
-    <input type="submit" value="Mettre à jour le panier" name="update">
+    <input type="submit" value="Mettre à jour le panier" name="update" class="update">
     </form>
                 
     <div class="box">
