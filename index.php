@@ -2,7 +2,7 @@
 <?php include 'config/template/head.php'; ?>
 <?php include 'config/template/nav.php'; ?>
 
-
+<!-- COUCOU -->
 
 <?php
 // Définition de la quantité de produits à montrer sur chaque page
