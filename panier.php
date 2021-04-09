@@ -13,7 +13,7 @@ if (isset($_POST['product_id'], $_POST['quantity']) && is_numeric($_POST['produc
     // Préparer la requête SQL, on vérifie que le produit soit dans la base de données
     $stmt = $pdo->prepare('SELECT * FROM products WHERE id = ?');
     $stmt->execute([$_POST['product_id']]);
-    // Récupérer les produits de la base de données et les retourner en tant qu'array 
+    // Récupérer les produits de la base de données et les retourner en tant que tableau
     $product = $stmt->fetch(PDO::FETCH_ASSOC);
     // Vérifier si le produit existe 
     if ($product && $quantity > 0) {
@@ -72,7 +72,7 @@ if ($products_in_cart) {
     $stmt = $pdo->prepare('SELECT * FROM products WHERE id IN (' . $array_to_question_marks . ')');
     //Juste besoin des array keys mais pas des valeurs, les keys sont les id des produits
     $stmt->execute(array_keys($products_in_cart));
-    // Récupère le produit de la base de données et le retourne en tant qu'array 
+    // Récupère le produit de la base de données et le retourne en tant que tableau 
     $products = $stmt->fetchAll(PDO::FETCH_ASSOC);
     // Calcul du sous-total
     foreach ($products as $product) {
