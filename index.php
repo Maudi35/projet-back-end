@@ -1,7 +1,8 @@
+<?php include 'pdo.php'; ?>
 <?php include 'config/template/head.php'; ?>
 <?php include 'config/template/nav.php'; ?>
 
-<?php include 'pdo.php'; ?>
+
 
 <?php
 // Définition de la quantité de produits à montrer sur chaque page
@@ -24,15 +25,14 @@ $products = $stmt->fetchAll(PDO::FETCH_ASSOC);?>
 	<div class="products">
 		<!-- Chaque produit sera affiché sur la page d'accueil avec ses informations associées -->
 		<?php foreach ($products as $product): ?>
-			<article class="product" aria-label="<?=$product['name']?>">
-			<img class="img-product" src="asset/img-backend-webp/<?=$product['img']?>"
-					alt="<?=$product['name']?>"></a>
+		<article class="product" aria-label="<?=$product['name']?>">
+			<img class="img-product" src="asset/img-backend-webp/<?=$product['img']?>" alt="<?=$product['name']?>"></a>
 			<div class="product-description">
 				<a href="fiche_produit.php?page=product&id=<?=$product['id']?>"><?=$product['name']?>
-				<a href="fiche_produit.php?page=product&id=<?=$product['id']?>"></a>
-				<p class="price">&euro;<?=$product['price']?></p>
-				</div>
-			</article>
+					<a href="fiche_produit.php?page=product&id=<?=$product['id']?>"></a>
+					<p class="price">&euro;<?=$product['price']?></p>
+			</div>
+		</article>
 		<?php endforeach; ?>
 	</div>
 </section>

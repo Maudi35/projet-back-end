@@ -1,7 +1,8 @@
+<?php include 'pdo.php';?>
 <?php include 'config/template/head.php'; ?>
 <?php include 'config/template/nav.php'; ?>
 
-<?php include 'pdo.php';?>
+
 
 <?php
 // Vérifier que le id est bien renseigné dans l'url 
@@ -24,8 +25,7 @@ if (isset($_GET['id'])) {
 
 <div class="all-product-page">
 	<section class="product-img" aria-label="Images produits">
-		<img class="img-product-container" src="asset/img-backend-webp/<?=$product['img']?>"
-			alt="<?=$product['alt']?>">
+		<img class="img-product-container" src="asset/img-backend-webp/<?=$product['img']?>" alt="<?=$product['alt']?>">
 		<img class="img-product-container" src="asset/img-backend-webp/<?=$product['img2']?>"
 			alt="<?=$product['alt2']?>">
 		<img class="img-product-container" src="asset/img-backend-webp/<?=$product['img3']?>"
@@ -41,7 +41,8 @@ if (isset($_GET['id'])) {
 		<form action="panier.php?page=panier" method="post">
 			<div class="quantity">
 				<p>Quantité</p>
-				<input class="quantity-input" type="number" id="quantity" name="quantity" value="1"  min="0" max="<?=$product['quantity']?>" required>
+				<input class="quantity-input" type="number" id="quantity" name="quantity" value="1" min="0"
+					max="<?=$product['quantity']?>" required>
 				<input type="hidden" name="product_id" value="<?=$product['id']?>">
 			</div>
 			<div class="add-to-cart">

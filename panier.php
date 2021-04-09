@@ -1,7 +1,8 @@
+<?php include 'pdo.php';?>
 <?php include 'config/template/head.php'; ?>
 <?php include 'config/template/nav.php'; ?>
 
-<?php include 'pdo.php';?>
+
 
 <?php
 
@@ -57,7 +58,7 @@ if (isset($_POST['update']) && isset($_SESSION['cart'])) {
         }
     }
     header('location:panier.php?page-panier=cart');
-    exit;
+    exit();
 }
 
 // Vérifier la variable session pour les produits du panier 
@@ -91,31 +92,34 @@ if ($products_in_cart) {
 <section class="basket">
     <h2>PANIER</h2>
     <form action='panier.php?page-panier=cart' method='post'>
-    <hr>
-    <?php if (empty($products)): ?>
-    <p>Vous n'avez pas ajouté de produit dans votre panier</p>
-    <?php else: ?>   
-    <div class="basket-quantity">
-    <?php foreach ($products as $product): ?>
-    <!-- Image produit -->
-    <div class="basket-product">
-        <a href="panier.php?page=fiche_produit&id=<?=$product['id']?>">
-        <img src="asset/img-backend-webp/<?=$product['img']?>" alt="<?=$product['alt']?>">
-        <p class="basket-price">&euro;<?=$product['price'] * $products_in_cart[$product['id']]?></p>
-        </a>
-        <!-- Nom produit -->
-        <a class="product-name-basket" href="fiche_produit.php?page=product&id=<?=$product['id']?>"><?=$product['name']?></a>   
-                <input class="product-quantity" type="number" name="quantity-<?=$product['id']?>" 
-                value="<?=$products_in_cart[$product['id']]?>" min="1" max="<?=$product['quantity']?>" placeholder="Quantity" required> 
-        <a href="panier.php?page=panier=cart&delete=<?= $product['id']?>" value="Supprimer" id="delete" name="delete" class="delete-input">Supprimer</a> 
-        <!-- Prix du produit -->
-    </div>
-        <?php endforeach; ?>
-                <?php endif; ?>
-    </div>
-    <input type="submit" value="Mettre à jour le panier" name="update" class="update">
+        <hr>
+        <?php if (empty($products)): ?>
+        <p>Vous n'avez pas ajouté de produit dans votre panier</p>
+        <?php else: ?>
+        <div class="basket-quantity">
+            <?php foreach ($products as $product): ?>
+            <!-- Image produit -->
+            <div class="basket-product">
+                <a href="panier.php?page=fiche_produit&id=<?=$product['id']?>">
+                    <img src="asset/img-backend-webp/<?=$product['img']?>" alt="<?=$product['alt']?>">
+                    <p class="basket-price">&euro;<?=$product['price'] * $products_in_cart[$product['id']]?></p>
+                </a>
+                <!-- Nom produit -->
+                <a class="product-name-basket"
+                    href="fiche_produit.php?page=product&id=<?=$product['id']?>"><?=$product['name']?></a>
+                <input class="product-quantity" type="number" name="quantity-<?=$product['id']?>"
+                    value="<?=$products_in_cart[$product['id']]?>" min="1" max="<?=$product['quantity']?>"
+                    placeholder="Quantity" required>
+                <a href="panier.php?page=panier=cart&delete=<?= $product['id']?>" value="Supprimer" id="delete"
+                    name="delete" class="delete-input">Supprimer</a>
+                <!-- Prix du produit -->
+            </div>
+            <?php endforeach; ?>
+            <?php endif; ?>
+        </div>
+        <input type="submit" value="Mettre à jour le panier" name="update" class="update">
     </form>
-                
+
     <div class="box">
         <div class="total">
             <p>Sous-total</p>
