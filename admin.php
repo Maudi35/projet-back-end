@@ -1,7 +1,19 @@
 <?php 
+include 'pdo.php'; 
+include 'config/template/head.php';
+include 'config/template/nav.php';
 
-// il faut l'administrateur il ait accès à tous les produits / au nom des users 
-// et qu'il puisse les supprimer si il veut 
+$req = $pdo->prepare ('SELECT * FROM users WHERE role = 0'); 
+$req->execute(); 
 
-?>
+$resultat = $req->fetchAll(PDO::FETCH_ASSOC); 
+var_dump($resultat); 
+
+
+
+?> 
+
+
+
+
 
