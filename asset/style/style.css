@@ -187,7 +187,7 @@ input[type="checkbox"] {
   margin: 5px;
 }
 
-/*PROFIL*/
+/* PROFIL */
 
 .form-button {
   padding: 5px 10px;
@@ -287,6 +287,24 @@ input[type="checkbox"] {
   justify-content: start;
 }
 
+/* ADMIN */
+th, td {
+  padding: 5px;
+  border: solid 1px black;
+}
+
+tr {
+  flex-direction: column;
+  display: flex; 
+  width: 100%;
+}
+
+table {
+  padding: 0 30px;
+  max-width: 1280px;
+  margin: auto;
+}
+
 /* FOOTER  */
 footer,
 li,
@@ -349,8 +367,6 @@ footer {
     display: flex;
     flex-direction: row;
   }
-
-
 
   .newsletter-input {
     width: 100%;
@@ -424,6 +440,26 @@ footer {
     justify-content: start;
   }
 
+  /* ADMIN */
+
+  table {
+    padding: 0 30px;
+    max-width: 1280px;
+    margin: auto;
+    width: 100%;
+  }
+  
+  th, td {
+    padding: 15px;
+    margin: 2px;
+    border: solid 1px black;
+  }
+
+  tr {
+    display:flex; 
+    flex-direction: row;
+  }
+  
   /* FOOTER */
   footer {
     width: 100%;
