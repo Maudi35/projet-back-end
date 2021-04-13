@@ -1,14 +1,5 @@
 <?php
-
-  function debug($variable) {
-  echo '<pre>' . print_r($variable, true) . '</pre>'; 
-} 
-
-  function str_random($length) {
-    $alphabet = "0124566789azertyuiopqsdfghjklmwxcvbnAZERTYUIOPQSDFGHJKLMWXCVBN"; 
-    return substr(str_shuffle(str_repeat($alphabet, $length)), 0, $length); 
-} 
-
+// Création d'une fonction logged_only : l'utilisateur n'a pas accès à cette page s'il n'a pas de compte 
   function logged_only() {
     if(session_status() == PHP_SESSION_NONE) {
       session_start(); 
@@ -19,3 +10,5 @@
       exit(); 
   }
 }
+?>
+

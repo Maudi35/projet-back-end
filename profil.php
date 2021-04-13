@@ -1,22 +1,13 @@
-<?php include 'config/template/head.php'; ?>
-<?php include 'config/template/nav.php'; ?>
-<?php include 'pdo.php'; ?>
+<?php include 'config/template/head.php';
+include 'config/template/nav.php'; 
+include 'pdo.php'; ?>
 
 <?php 
 require 'config/function.php'; 
+// Création d'une fonction logged_only : l'utilisateur n'a pas accès à cette page s'il n'a pas de compte 
 logged_only(); 
-if(!empty($_POST)) {
-	if(empty($_POST['password']) || $_POST['password'] != $_POST['new-password']) {
-		$_SESSION['flash']['danger']	= "Les mots de passes ne correspondent pas"; 
-	}else {
-		$user_id = $_SESSION['auth']->id; 
-		$password = password_hash($_POST['password'], PASSWORD_BCRYPT); 
-		require_once 'pdo.php'; 
-		$pdo->prepare('UPDATE users SET password = ?')->execute([$password, $user_id]); 
-		$_SESSION['flash']['success'] = "Votre mot de passe a bien été mis à jour"; 
-	}
-}
 
+// intval permet de retourner la valeur entière équivalente d'une variable 
 $getid = intval($_SESSION['id']); 
 $req = $pdo->prepare('SELECT * FROM users WHERE id = ?'); 
 $req->execute(array($getid)); 

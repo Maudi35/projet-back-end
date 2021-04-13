@@ -1,14 +1,14 @@
-<?php include 'config/template/head.php'; ?>
-<?php include 'config/template/nav.php'; ?>
+<?php include 'pdo.php'; 
+include 'config/template/head.php'; 
+include 'config/template/nav.php'; ?>
 
 <?php 
 if(isset($_POST['envoyer'])) {
   if(!empty($_POST) && !empty($_POST['pseudo']) && !empty($_POST['password'])) {
-    require_once 'pdo.php'; 
-    require_once 'config/function.php';
     $pseudo = htmlspecialchars($_POST['pseudo']); 
     $password = htmlspecialchars($_POST['password']); 
-
+    // Requête préparée par rapport au pseudo de l'utilisateur puis son mdp 
+    // On vérifie ses informations pour la connexion 
     $req = $pdo->prepare('SELECT * FROM users WHERE pseudo = ?'); 
     $req->execute(array($pseudo)); 
     $userexist = $req->rowCount(); 
@@ -19,6 +19,8 @@ if(isset($_POST['envoyer'])) {
       var_dump($passworduser); 
       $role = $user['role']; 
   
+    // On gère les sessions en fonction du rôle de l'utilisateur 
+    // O = utilisateur # 1 = admin 
     if(password_verify($password, $passworduser)){
       if($role == 0) {
         $_SESSION['id'] = $user['id']; 
@@ -34,7 +36,7 @@ if(isset($_POST['envoyer'])) {
         exit(); 
       }
       } else {
-      $_SESSION['flash']['danger'] = 'Identifiant ou mot de passe incorrecte';
+        $_SESSION['flash']['danger'] = 'Identifiant ou mot de passe incorrecte';
       }
     }
   }
@@ -60,3 +62,4 @@ if(isset($_POST['envoyer'])) {
 </section>
 
 <?php include 'config/template/footer.php'; ?>
+

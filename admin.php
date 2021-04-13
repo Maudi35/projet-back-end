@@ -3,25 +3,13 @@ include 'pdo.php';
 include 'config/template/head.php';
 include 'config/template/nav.php';
 
-// Requête clients 
-if(isset($_SESSION['id']) and count($_SESSION)>0){
-  var_dump(isset($_SESSION));
-  $getRole=$pdo->prepare('SELECT * FROM users WHERE id= ?');
-  $getRole->execute(array($_SESSION['id']));
-  $resultat= $getRole->fetch(PDO::FETCH_ASSOC);
-  $role=$resultat['role'];
-  var_dump($role);
-  if($role==1){
-    $req = $pdo->prepare ('SELECT * FROM users WHERE role = 0'); 
-    $req->execute(); 
-    $resultat = $req->fetchAll(PDO::FETCH_ASSOC); 
-  }
-}
-else{
-  exit('Vous ne pouvez pas accéder à cette page');
-}
-// Requête produits 
+// On créé une requête pour récupérer les infos des clients 
+$req = $pdo->prepare ('SELECT * FROM users WHERE role = 0'); 
+$req->execute(); 
 
+$resultat = $req->fetchAll(PDO::FETCH_ASSOC); 
+
+// On créé une requête pour récupérer les infos des produits  
 $reqproduits = $pdo->prepare ('SELECT * FROM products WHERE 1'); 
 $reqproduits->execute(); 
 
@@ -49,6 +37,7 @@ $resultatproduits = $reqproduits->fetchAll(PDO::FETCH_ASSOC);
       <th>Pseudo</th>
       <th>Email</th>
     </tr>
+    <!-- boucle foreach : pour parcourir le tableau  -->
     <?php foreach($resultat as $clients) {
       ?>
     <tr>
@@ -59,6 +48,7 @@ $resultatproduits = $reqproduits->fetchAll(PDO::FETCH_ASSOC);
       <td><?= $clients['tel']?></td>
       <td><?= $clients['pseudo']?></td>
       <td><?= $clients['email']?></td>
+      <!-- On lie à notre tableau un fichier qui nous permettra de supprimer des utilisateurs -->
       <td><a href="traitement/supprimer.php?id=<?= $clients['id']?>">Supprimer</a></td> 
     </tr>
     <?php
@@ -92,6 +82,7 @@ $resultatproduits = $reqproduits->fetchAll(PDO::FETCH_ASSOC);
       <td><?= $produits['description']?></td>
       <td><?= $produits['price']?></td>
       <td><?= $produits['quantity']?></td>
+            <!-- On lie à notre tableau un fichier qui nous permettra de supprimer des produits -->
       <td><a href="traitement/supprimer-produits.php?id=<?= $produits['id']?>">Supprimer</a></td> 
     </tr>
     <?php

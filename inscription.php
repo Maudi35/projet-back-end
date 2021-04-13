@@ -1,10 +1,11 @@
-<?php include 'config/template/head.php'; ?>
-<?php include 'config/template/nav.php'; ?>
+<?php include 'config/template/head.php';
+include 'config/template/nav.php'; ?>
 
 <?php 
 require_once 'config/function.php';
-// session_start(); 
 
+// Déclaration des variables 
+// htmlspecialchars : convertit les caractères spéciaux en entités HTML
 if(isset($_POST['envoyer'])) {
 	$name = htmlspecialchars($_POST['name']);
 	$surname = htmlspecialchars($_POST['surname']);
@@ -16,27 +17,36 @@ if(isset($_POST['envoyer'])) {
 	$password = htmlspecialchars($_POST['password']);
 	$confirmpassword = htmlspecialchars($_POST['confirmpassword']);
 
+// Si les champs sont vides 
 	if(!empty($_POST['name']) and !empty($_POST['surname']) and !empty($_POST['civilite']) and !empty($_POST['address']) and !empty($_POST['telephone']) and !empty($_POST['email']) and !empty($_POST['pseudo']) and !empty($_POST['password']) and !empty($_POST['confirmpassword'])) {
 		$pseudolength = strlen($pseudo); 
 		$req = $pdo->prepare('SELECT * FROM users WHERE pseudo = ?'); 
 		$req->execute(array($pseudo)); 
 		$pseudoexist = $req->rowCount(); 
 		if($pseudoexist == 0) {
+			// strlen : calcule la taille d'une chaîne 
+			// on s'assure que la longueur du telephone vaut 10 
 			$tellenght = strlen($telephone); 
 			if($tellenght == 10) {
+				// FILTER_VALIDATE_EMAIL : permet de valider une adresse de couriel
 				if(filter_var(intval($telephone), FILTER_VALIDATE_INT)) {
 					if(filter_var($email, FILTER_VALIDATE_EMAIL)) {
 						$req = $pdo->prepare('SELECT * FROM users WHERE email = ?'); 
 						$req->execute(array($email)); 
+						// rowCount : retourne le nombre de lignes concernées  
 						$emailexist = $req->rowCount(); 
 							if($emailexist == 0) {
+								// fonction preg_match : conditions pour valider le mot de passe de l'utilisateur 
 								if(preg_match('~^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9])(?=.*?[$%?!]).{10,20}$~u', $password)== 1) {
 									if($password === $confirmpassword) {
+										// fonction passwordhash : permet de hacher le mot de passe 
 										$passwordhash = password_hash($password, PASSWORD_DEFAULT); 
+										// Insertion des données 
 										$insert = $pdo->prepare('INSERT INTO users (name, surname, civilite, address, tel, email, pseudo, password, role) VALUES (?,?,?,?,?,?,?,?,0)'); 
 										$insert->execute(array($name, $surname, $civilite, $address, $telephone, $email, $pseudo, $passwordhash)); 
 										header('location:login.php');
 										exit(); 
+										// Si les champs ne sont pas correctement remplis on renvoie systématiquement l'utilisateur à la page inscription 
 									} else {
 										header('location:inscription.php');
 										exit(); 
@@ -68,7 +78,7 @@ if(isset($_POST['envoyer'])) {
 		} else {
 			header('location:inscription.php');
 			exit(); 
-	}
+	} 
 } 
 ?> 
 

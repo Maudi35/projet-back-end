@@ -1,6 +1,6 @@
-<?php include 'pdo.php';?>
-<?php include 'config/template/head.php'; ?>
-<?php include 'config/template/nav.php'; ?>
+<?php include 'pdo.php';
+include 'config/template/head.php'; 
+include 'config/template/nav.php'; ?>
 
 
 

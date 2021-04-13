@@ -1,6 +1,6 @@
-<?php include 'pdo.php';?>
-<?php include 'config/template/head.php'; ?>
-<?php include 'config/template/nav.php'; ?>
+<?php include 'pdo.php';
+include 'config/template/head.php'; 
+include 'config/template/nav.php'; ?>
 
 
 
@@ -68,7 +68,6 @@ $subtotal = 0.00;
 // S'il y a des produits dans le panier
 if ($products_in_cart) {
     // Il y a des produits dans le panier donc il faut sélectionner ceux de la base de données 
-    // Products in cart array to question mark string array, we need the SQL statement to include IN (?,?,?,...etc)
     $array_to_question_marks = implode(',', array_fill(0, count($products_in_cart), '?'));
     $stmt = $pdo->prepare('SELECT * FROM products WHERE id IN (' . $array_to_question_marks . ')');
     //Juste besoin des array keys mais pas des valeurs, les keys sont les id des produits
@@ -80,10 +79,7 @@ if ($products_in_cart) {
         $subtotal += (float)$product['price'] * (int)$products_in_cart[$product['id']];
     }
 }
-
 ?>
-
-
 
 <hr>
 <div class="img-basket">
@@ -93,10 +89,8 @@ if ($products_in_cart) {
     <h2>PANIER</h2>
     <form action='panier.php?page-panier=cart' method='post'>
         <hr>
-        <!-- S'il n'y a pas d'ajout au panier alors un message est envoyé à l'utilisateur -->
         <?php if (empty($products)): ?>
         <p>Vous n'avez pas ajouté de produit dans votre panier</p>
-        <!-- Sinon le panier contenant les articles s'affiche -->
         <?php else: ?>
         <div class="basket-quantity">
             <?php foreach ($products as $product): ?>
@@ -119,7 +113,7 @@ if ($products_in_cart) {
             <?php endforeach; ?>
             <?php endif; ?>
         </div>
-        <input class="update-btn" type="submit" value="Mettre à jour le panier" name="update" class="update">
+        <input type="submit" value="Mettre à jour le panier" name="update" class="update">
     </form>
 
     <div class="box">
