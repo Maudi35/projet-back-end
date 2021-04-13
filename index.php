@@ -28,7 +28,7 @@ $products = $stmt->fetchAll(PDO::FETCH_ASSOC);?>
 		<article class="product" aria-label="<?=$product['name']?>">
 			<div class="product-description">
 				<figure><img class="img-product" src="asset/img-backend-webp/<?=$product['img']?>"
-						alt="<?=$product['name']?>"></a>
+						alt="<?=$product['alt']?>"></a>
 					<figcaption><a href="fiche_produit.php?page=product&id=<?=$product['id']?>"><?=$product['name']?>
 					</figcaption>
 				</figure>
