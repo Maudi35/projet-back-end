@@ -93,8 +93,10 @@ if ($products_in_cart) {
     <h2>PANIER</h2>
     <form action='panier.php?page-panier=cart' method='post'>
         <hr>
+        <!-- S'il n'y a pas d'ajout au panier alors un message est envoyé à l'utilisateur -->
         <?php if (empty($products)): ?>
         <p>Vous n'avez pas ajouté de produit dans votre panier</p>
+        <!-- Sinon le panier contenant les articles s'affiche -->
         <?php else: ?>
         <div class="basket-quantity">
             <?php foreach ($products as $product): ?>
@@ -117,7 +119,7 @@ if ($products_in_cart) {
             <?php endforeach; ?>
             <?php endif; ?>
         </div>
-        <input type="submit" value="Mettre à jour le panier" name="update" class="update">
+        <input class="update-btn" type="submit" value="Mettre à jour le panier" name="update" class="update">
     </form>
 
     <div class="box">

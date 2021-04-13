@@ -26,11 +26,14 @@ $products = $stmt->fetchAll(PDO::FETCH_ASSOC);?>
 		<!-- Chaque produit sera affiché sur la page d'accueil avec ses informations associées -->
 		<?php foreach ($products as $product): ?>
 		<article class="product" aria-label="<?=$product['name']?>">
-			<img class="img-product" src="asset/img-backend-webp/<?=$product['img']?>" alt="<?=$product['name']?>"></a>
 			<div class="product-description">
-				<a href="fiche_produit.php?page=product&id=<?=$product['id']?>"><?=$product['name']?>
-					<a href="fiche_produit.php?page=product&id=<?=$product['id']?>"></a>
-					<p class="price">&euro;<?=$product['price']?></p>
+				<figure><img class="img-product" src="asset/img-backend-webp/<?=$product['img']?>"
+						alt="<?=$product['name']?>"></a>
+					<figcaption><a href="fiche_produit.php?page=product&id=<?=$product['id']?>"><?=$product['name']?>
+					</figcaption>
+				</figure>
+				<a href="fiche_produit.php?page=product&id=<?=$product['id']?>"></a>
+				<p class="price">&euro;<?=$product['price']?></p>
 			</div>
 		</article>
 		<?php endforeach; ?>

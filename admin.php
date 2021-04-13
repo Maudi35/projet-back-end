@@ -4,11 +4,22 @@ include 'config/template/head.php';
 include 'config/template/nav.php';
 
 // Requête clients 
-$req = $pdo->prepare ('SELECT * FROM users WHERE role = 0'); 
-$req->execute(); 
-
-$resultat = $req->fetchAll(PDO::FETCH_ASSOC); 
-
+if(isset($_SESSION['id']) and count($_SESSION)>0){
+  var_dump(isset($_SESSION));
+  $getRole=$pdo->prepare('SELECT * FROM users WHERE id= ?');
+  $getRole->execute(array($_SESSION['id']));
+  $resultat= $getRole->fetch(PDO::FETCH_ASSOC);
+  $role=$resultat['role'];
+  var_dump($role);
+  if($role==1){
+    $req = $pdo->prepare ('SELECT * FROM users WHERE role = 0'); 
+    $req->execute(); 
+    $resultat = $req->fetchAll(PDO::FETCH_ASSOC); 
+  }
+}
+else{
+  exit('Vous ne pouvez pas accéder à cette page');
+}
 // Requête produits 
 
 $reqproduits = $pdo->prepare ('SELECT * FROM products WHERE 1'); 
