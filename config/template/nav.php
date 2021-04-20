@@ -10,7 +10,7 @@
             <li><a class="nav-desktop" href="panier.php">Panier</a></li>
             <li><a href="logout.php">Se déconnecter</a></li>
         <?php else: ?>
-    <!-- Si on est pas connecté  -->
+    <!-- Si on n'est pas connecté  -->
             <li><a class="nav-desktop" href="inscription.php">Inscription</a></li>
             <li><a class="nav-desktop" href="login.php">Login</a></li>  
             <li><a class="nav-desktop" href="profil.php">Profil</a></li>

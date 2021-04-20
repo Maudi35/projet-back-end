@@ -86,7 +86,7 @@ input {
 .home-product {
   width: 100%;
   display: flex;
-  flex-direction: column; 
+  flex-direction: column;
   text-align: center;
   align-items: center;
 }
@@ -217,30 +217,28 @@ input[type="checkbox"] {
   display: flex;
 }
 
-.basket-quantity a {
-  color: grey;
-  text-decoration: underline;
-}
-
 .basket img {
   height: 200px;
   object-fit: contain;
   border-radius: 8px;
 }
 
-.update {
-  padding: 5px; 
-  margin: 10px;
-  background-color: black;
-  color: white;
-}
-
 .delete-input {
-  background-color: black;
+  color: rgb(134, 134, 134);
+  background-color: none;
   padding: 3px;
   border-radius: 10px;
   height: 30px;
   margin: 5px;
+  text-decoration: underline;
+}
+
+.update {
+  padding: 5px 5px;
+  margin: 10px;
+  border: 0.1rem solid #000;
+  background-color: rgb(236, 236, 236);
+  color: rgb(0, 0, 0);
 }
 
 .product-quantity {
@@ -251,8 +249,9 @@ input[type="checkbox"] {
 
 .basket-price {
   font-weight: bold;
+  font-size: 18px;
   text-align: center;
-  color:black; 
+  color: black;
   margin: 10px;
 }
 
@@ -285,17 +284,19 @@ input[type="checkbox"] {
 .product-name-basket {
   width: 80%;
   justify-content: start;
+  color: #000;
 }
 
 /* ADMIN */
-th, td {
+th,
+td {
   padding: 5px;
   border: solid 1px black;
 }
 
 tr {
   flex-direction: column;
-  display: flex; 
+  display: flex;
   width: 100%;
 }
 
@@ -335,6 +336,7 @@ footer {
 @media screen and (min-width: 768px) {
   .navbar {
     justify-content: space-between;
+    align-items: flex-end;
   }
 
   .newsletter {
@@ -448,23 +450,34 @@ footer {
     margin: auto;
     width: 100%;
   }
-  
-  th, td {
+
+  th,
+  td {
     padding: 15px;
     border: solid 1px black;
   }
 
   tr {
-    display:flex; 
+    display: flex;
     flex-direction: row;
   }
-  
+
   /* FOOTER */
   footer {
     width: 100%;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+  }
+
+  .footer-left {
+    margin-left: 2%;
+    width: 50%;
+  }
+
+  .footer-left li,
+  .footer-left h4 {
+    text-align: left;
   }
 
   .newsletter-input {

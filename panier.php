@@ -2,10 +2,7 @@
 include 'config/template/head.php'; 
 include 'config/template/nav.php'; ?>
 
-
-
 <?php
-
 // DECLARATION DES VARIABLES ET AJOUT DE PRODUIT AU PANIER
 if (isset($_POST['product_id'], $_POST['quantity']) && is_numeric($_POST['product_id']) && is_numeric($_POST['quantity'])) {
     // Déclarer les variables en s'assurant qu'elles soient de type chiffre 
@@ -83,7 +80,7 @@ if ($products_in_cart) {
 
 <hr>
 <div class="img-basket">
-    <img src="asset/img-backend-webp/image-panier-cosmetics.webp" alt="Sac de course en tissu de type toad bag">
+    <img src="asset/img-backend-webp/img-panier2.webp" alt="Sac de course en tissu de type toad bag">
 </div>
 <section class="basket">
     <h2>PANIER</h2>
@@ -108,7 +105,6 @@ if ($products_in_cart) {
                     placeholder="Quantity" required>
                 <a href="panier.php?page=panier=cart&delete=<?= $product['id']?>" value="Supprimer" id="delete"
                     name="delete" class="delete-input">Supprimer</a>
-                <!-- Prix du produit -->
             </div>
             <?php endforeach; ?>
             <?php endif; ?>

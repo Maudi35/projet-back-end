@@ -5,12 +5,12 @@ include 'config/template/nav.php'; ?>
 
 
 <?php
-// Vérifier que le id est bien renseigné dans l'url 
+// Vérifier que l'id est bien renseigné dans l'url 
 if (isset($_GET['id'])) {
     // Prépare l'instruction et exécute, évite les injections sql
     $stmt = $pdo->prepare('SELECT * FROM products WHERE id = ?');
     $stmt->execute([$_GET['id']]);
-    // Récupère le produit dans la base de données et déclare le résultat sous forme de rang 
+    // Récupère le produit dans la base de données et déclare le résultat sous forme de tableau  
     $product = $stmt->fetch(PDO::FETCH_ASSOC);
     // Vérifier si le produit existe et donc si le rang n'est pas vide
     if (!$product) {
@@ -18,7 +18,6 @@ if (isset($_GET['id'])) {
         exit('Product does not exist!');
     }
 } else {
-    // Si l'id n'était pas spécifié alors cela renvoi un message d'erreur
     exit('Product does not exist!');
 }
 ?>

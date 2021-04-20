@@ -5,7 +5,7 @@
   $req = $pdo->prepare('DELETE FROM products WHERE id = ?'); 
   $req->execute(array($id)); 
   header('location:../admin.php'); 
-
+exit();
 ?>
 
 
